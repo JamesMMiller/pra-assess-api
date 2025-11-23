@@ -15,6 +15,14 @@ This API allows users to stream PRA assessments for a given GitHub repository. I
 - **GitHub Integration**: Fetches file trees and content directly from GitHub
 - **Context-Aware**: Templates include reference resources (e.g., MDTP Handbook) for LLM
 
+## Token Efficiency Strategy
+
+This API is designed to be highly token-efficient, avoiding the need for expensive context caching (which requires >32k tokens):
+
+1.  **Dynamic Discovery**: Instead of sending the entire repository content, the API first asks the LLM to select only the files relevant to the specific check.
+2.  **Shared Context**: A concise summary of the project structure is generated once and reused across all checks.
+3.  **Base Prompts**: Assessor personas and instructions are defined in the system prompt, keeping user prompts focused.
+
 ## Prerequisites
 
 - Java 21

@@ -15,6 +15,14 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
   private val model   = "gemini-2.0-flash"
   private val baseUrl = "https://generativelanguage.googleapis.com/v1beta/models"
 
+  // Note on Caching:
+  // Gemini Context Caching requires a minimum of 32,768 tokens.
+  // Our current strategy uses "Dynamic Discovery" to select only relevant files, keeping the context size
+  // well below this limit (typically < 5k tokens). Therefore, explicit caching APIs are not used here.
+  // Instead, we optimize for token efficiency by:
+  // 1. Summarizing the file tree (Shared Context) once.
+  // 2. Using a Base Prompt in the system instruction.
+  // 3. Selecting only relevant files for each check.
   def generateSharedContext(fileTree: Seq[String], template: models.AssessmentTemplate): Future[String] = {
     val contextResourcesText = if (template.contextResources.nonEmpty) {
       val resources = template.contextResources
