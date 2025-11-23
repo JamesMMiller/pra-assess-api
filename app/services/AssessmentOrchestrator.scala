@@ -20,19 +20,11 @@ class AssessmentOrchestrator @Inject() (
     Source.future(fileTreeFuture).flatMapConcat { fileTree =>
       // 2. Generate Shared Context
       Source.future(geminiService.generateSharedContext(fileTree)).flatMapConcat { sharedContext =>
-
-        // 3. Stream Items (Hardcoded for prototype)
-        val items = List(
-          "1.A - Does your service implement any non-standard patterns, or contradict any of the MDTP Opinions?",
-          "1.C - Your service should not be using any deprecated HMRC Libraries.",
-          "2.A - Are you using Mongo for JSON data persistence?",
-          "4.B - Public Microservices should be authenticated and authorised by default."
-        )
-
-        Source(items).mapAsync(parallelism = 2) { item =>
+        // 3. Stream Check Items
+        Source(models.CheckItem.items).mapAsync(parallelism = 2) { checkItem =>
           for {
             // a. Select Files
-            relevantFiles <- geminiService.selectFiles(sharedContext, item, fileTree)
+            relevantFiles <- geminiService.selectFiles(sharedContext, checkItem.description, fileTree)
             // b. Fetch Content
             fileContents <- Future
               .sequence(relevantFiles.map { path =>
@@ -42,7 +34,7 @@ class AssessmentOrchestrator @Inject() (
               })
               .map(_.toMap)
             // c. Assess
-            result <- geminiService.assessItem(sharedContext, item, fileContents)
+            result <- geminiService.assessItem(owner, repo, sharedContext, checkItem, fileContents)
           } yield result
         }
       }

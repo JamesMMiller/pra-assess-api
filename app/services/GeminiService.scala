@@ -55,7 +55,13 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
     }
   }
 
-  def assessItem(sharedContext: String, item: String, fileContents: Map[String, String]): Future[AssessmentResult] = {
+  def assessItem(
+      owner: String,
+      repo: String,
+      sharedContext: String,
+      checkItem: models.CheckItem,
+      fileContents: Map[String, String]
+  ): Future[AssessmentResult] = {
     val filesContext = fileContents
       .map { case (path, content) =>
         s"--- $path ---\n$content\n"
@@ -64,7 +70,7 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
 
     val prompt = s"""
       |Context: $sharedContext
-      |Checklist Item: $item
+      |Checklist Item: ${checkItem.description}
       |
       |Assess if the code passes the check.
       |Return JSON matching this schema:
@@ -73,8 +79,11 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
       |  "confidence": 0.0-1.0,
       |  "requiresReview": boolean,
       |  "reason": "string",
-      |  "evidence": [{ "filePath": "string", "lineStart": int, "lineEnd": int, "snippet": "string" }]
+      |  "evidence": [{ "filePath": "string", "lineStart": int, "lineEnd": int }]
       |}
+      |
+      |For evidence, provide the file path and line numbers where relevant code is found.
+      |Do NOT include code snippets - only file paths and line numbers.
       |
       |Code:
       |$filesContext
@@ -83,15 +92,48 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
     callGemini(prompt, "You are a PRA Assessor. Return only JSON.", jsonMode = true).map { response =>
       val content = extractText(response)
       try {
-        Json.parse(content).as[AssessmentResult]
+        val json           = Json.parse(content)
+        val status         = models.AssessmentStatus.fromString((json \ "status").as[String])
+        val confidence     = (json \ "confidence").as[Double]
+        val requiresReview = (json \ "requiresReview").as[Boolean]
+        val reason         = (json \ "reason").as[String]
+
+        // Convert evidence to GitHub URLs
+        val evidence = (json \ "evidence").as[Seq[JsValue]].map { ev =>
+          val filePath  = (ev \ "filePath").as[String]
+          val lineStart = (ev \ "lineStart").asOpt[Int]
+          val lineEnd   = (ev \ "lineEnd").asOpt[Int]
+
+          val githubUrl = utils.GitHubUrlHelper.generatePermalink(
+            owner = owner,
+            repo = repo,
+            filePath = filePath,
+            lineStart = lineStart,
+            lineEnd = lineEnd
+          )
+
+          models.Evidence(githubUrl)
+        }
+
+        AssessmentResult(
+          checkId = checkItem.id,
+          checkDescription = checkItem.description,
+          status = status,
+          confidence = confidence,
+          requiresReview = requiresReview,
+          reason = reason,
+          evidence = evidence
+        )
       } catch {
         case e: Exception =>
           AssessmentResult(
-            "WARNING",
-            0.0,
-            true,
-            s"Failed to parse LLM response: ${e.getMessage}. Raw: $content",
-            Seq.empty
+            checkId = checkItem.id,
+            checkDescription = checkItem.description,
+            status = models.AssessmentStatus.Warning,
+            confidence = 0.0,
+            requiresReview = true,
+            reason = s"Failed to parse LLM response: ${e.getMessage}. Raw: $content",
+            evidence = Seq.empty
           )
       }
     }
