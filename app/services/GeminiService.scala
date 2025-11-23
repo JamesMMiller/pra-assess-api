@@ -12,7 +12,7 @@ import models.{AssessmentResult, Evidence}
 class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec: ExecutionContext) {
 
   private val apiKey  = config.get[String]("pra.assessment.gemini.apiKey")
-  private val model   = "gemini-1.5-flash-001"
+  private val model   = "gemini-2.0-flash"
   private val baseUrl = "https://generativelanguage.googleapis.com/v1beta/models"
 
   def generateSharedContext(fileTree: Seq[String]): Future[String] = {
