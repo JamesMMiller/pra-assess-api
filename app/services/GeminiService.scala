@@ -15,12 +15,27 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
   private val model   = "gemini-2.0-flash"
   private val baseUrl = "https://generativelanguage.googleapis.com/v1beta/models"
 
-  def generateSharedContext(fileTree: Seq[String]): Future[String] = {
+  def generateSharedContext(fileTree: Seq[String], template: models.AssessmentTemplate): Future[String] = {
+    val contextResourcesText = if (template.contextResources.nonEmpty) {
+      val resources = template.contextResources
+        .map { resource =>
+          s"- ${resource.name} (${resource.url}): ${resource.description}"
+        }
+        .mkString("\n")
+      s"""
+         |
+         |Reference Resources:
+         |$resources
+         |
+         |Use these resources to understand the standards and patterns this assessment is based on.
+         |""".stripMargin
+    } else ""
+
     val prompt = s"""
       |Analyze this file tree and summarize the project structure, framework (e.g. Play, Spring), 
       |language (Scala, Java), and key architectural patterns.
       |Keep it concise (max 100 words).
-      |
+      |$contextResourcesText
       |File Tree:
       |${fileTree.take(200).mkString("\n")} 
       |(truncated if too long)

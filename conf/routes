@@ -5,7 +5,8 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index()
-GET     /assess/stream              controllers.AssessmentController.assess(repoUrl: String)
+GET     /assess/stream              controllers.AssessmentController.assess(repoUrl: String, templateId: Option[String] ?= None)
+
 GET     /hello-world                controllers.HomeController.helloWorld()
 
 # Map static resources from the /public folder to the /assets URL path
