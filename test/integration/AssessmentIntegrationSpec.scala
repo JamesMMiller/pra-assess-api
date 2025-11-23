@@ -16,6 +16,11 @@ class AssessmentIntegrationSpec extends PlaySpec with GuiceOneAppPerSuite with S
   "AssessmentController" should {
 
     "stream assessment results for pillar2-frontend" in {
+      val apiKey = app.configuration.getOptional[String]("pra.assessment.gemini.apiKey")
+      if (apiKey.isEmpty || apiKey.contains("MISSING_KEY")) {
+        cancel("Gemini API key not configured, skipping integration test")
+      }
+
       val repoUrl = "https://github.com/hmrc/pillar2-frontend"
       val request = FakeRequest(GET, s"/assess/stream?repoUrl=$repoUrl")
 

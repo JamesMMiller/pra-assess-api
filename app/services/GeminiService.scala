@@ -11,7 +11,7 @@ import models.{AssessmentResult, Evidence}
 @Singleton
 class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec: ExecutionContext) {
 
-  private val apiKey  = config.get[String]("pra.assessment.gemini.apiKey")
+  private val apiKey  = config.getOptional[String]("pra.assessment.gemini.apiKey").getOrElse("MISSING_KEY")
   private val model   = "gemini-2.0-flash"
   private val baseUrl = "https://generativelanguage.googleapis.com/v1beta/models"
 
