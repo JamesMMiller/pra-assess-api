@@ -1,14 +1,16 @@
-name := """pra-assess-api"""
+name         := """pra-assess-api"""
 organization := "com.example"
 
 version := "1.0-SNAPSHOT"
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala).settings(
-  coverageMinimumStmtTotal := 90,
-  coverageFailOnMinimum := false,
-  coverageHighlighting := true,
-  coverageExcludedFiles :=
-    """|.*handlers.*;
+lazy val root = (project in file("."))
+  .enablePlugins(PlayScala)
+  .settings(
+    coverageMinimumStmtTotal := 90,
+    coverageFailOnMinimum    := false,
+    coverageHighlighting     := true,
+    coverageExcludedPackages := "<empty>;Reverse.*",
+    coverageExcludedFiles := """|.*handlers.*;
        |.*queries.*;
        |.*viewmodels.*;
        |.*components.*;
@@ -22,15 +24,15 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala).settings(
        |.*views.ViewUtils;
        |.*views.html.templates.*;
        |""".stripMargin.replaceAll("\n", ";")
-)
+  )
 
 scalaVersion := "3.3.3"
 
 libraryDependencies += guice
+libraryDependencies += ws
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "7.0.2" % Test
 
 // Coverage settings
-
 
 // Linting alias
 addCommandAlias("lint", ";scalafmtAll; scalafixAll")

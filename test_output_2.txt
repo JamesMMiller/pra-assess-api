@@ -1,0 +1,53 @@
+[info] welcome to sbt 1.11.7 (Eclipse Adoptium Java 21.0.3)
+[info] loading project definition from /Users/jamil/git/pra-assess-api/project/project/project
+[info] loading settings for project pra-assess-api-build-build from metals.sbt...
+[info] loading project definition from /Users/jamil/git/pra-assess-api/project/project
+[info] loading settings for project pra-assess-api-build from metals.sbt, plugins.sbt...
+[info] loading project definition from /Users/jamil/git/pra-assess-api/project
+[info] loading settings for project root from build.sbt...
+[info]   __              __
+[info]   \ \     ____   / /____ _ __  __
+[info]    \ \   / __ \ / // __ `// / / /
+[info]    / /  / /_/ // // /_/ // /_/ /
+[info]   /_/  / .___//_/ \__,_/ \__, /
+[info]       /_/               /____/
+[info] 
+[info] Version 3.0.9 running Java 21.0.3
+[info] 
+[info] Play is run entirely by the community. Please consider contributing and/or donating:
+[info] https://www.playframework.com/sponsors
+[info] 
+[info] compiling 1 Scala source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+[info] done compiling
+[info] AssessmentIntegrationSpec:
+2025-11-23 12:21:34 [34mINFO [0;39m [36mp.a.http.HttpErrorHandlerExceptions[0;39m [35m[0;39m Registering exception handler: guice-provision-exception-handler
+[info] AssessmentController
+[info] - should stream assessment results for pillar2-frontend *** FAILED ***
+[info]   java.lang.RuntimeException: LLM call failed: 404 [{
+[info]   "error": {
+[info]     "code": 404,
+[info]     "message": "models/gemini-1.5-flash-001 is not found for API version v1main, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+[info]     "status": "NOT_FOUND"
+[info]   }
+[info] }
+[info] ]
+[info]   at services.GeminiService.callLlm$$anonfun$1(GeminiService.scala:133)
+[info]   at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+[info]   at org.apache.pekko.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:73)
+[info]   at org.apache.pekko.dispatch.BatchingExecutor$BlockableBatch.run$$anonfun$1(BatchingExecutor.scala:110)
+[info]   at org.apache.pekko.dispatch.BatchingExecutor$BlockableBatch.run$$anonfun$adapted$1(BatchingExecutor.scala:119)
+[info]   at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:94)
+[info]   at org.apache.pekko.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:119)
+[info]   at org.apache.pekko.dispatch.TaskInvocation.run(AbstractDispatcher.scala:59)
+[info]   at org.apache.pekko.dispatch.ForkJoinExecutorConfigurator$PekkoForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:57)
+[info]   at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+[info]   ...
+[info] Run completed in 2 seconds, 778 milliseconds.
+[info] Total number of tests run: 1
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0
+[info] *** 1 TEST FAILED ***
+[error] Failed tests:
+[error] 	integration.AssessmentIntegrationSpec
+[error] (Test / testOnly) sbt.TestsFailedException: Tests unsuccessful
+[error] Total time: 9 s, completed Nov 23, 2025, 12:21:36 PM

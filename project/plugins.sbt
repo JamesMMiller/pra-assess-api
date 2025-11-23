@@ -1,5 +1,5 @@
 addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.9")
 addSbtPlugin("org.foundweekends.giter8" % "sbt-giter8-scaffold" % "0.18.0")
-addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.0.11")
+addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.4.2")
 addSbtPlugin("ch.epfl.scala" % "sbt-scalafix" % "0.11.1")
 addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.5.2")

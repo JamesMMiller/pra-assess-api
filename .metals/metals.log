@@ -1,0 +1,2316 @@
+2025.11.21 10:03:23 INFO  Started: Metals version 1.6.3 in folders '/Users/jamil/git/pra-assess-api' for client Antigravity 1.104.0.
+2025.11.21 10:03:23 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.11.21 10:03:23 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+Nov 21, 2025 10:03:25 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3
+Nov 21, 2025 10:03:25 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+Nov 21, 2025 10:03:25 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+2025.11.21 10:03:40 INFO  running '/Users/jamil/.sdkman/candidates/sbt/current/bin/sbt -Dbloop.export-jar-classifiers=sources bloopInstall'
+2025.11.21 10:03:41 INFO  no build target found for /Users/jamil/git/pra-assess-api/project/metals.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:03:41 WARN  no build target for: /Users/jamil/git/pra-assess-api/project/metals.sbt
+2025.11.21 10:03:41 WARN  no build target for: /Users/jamil/git/pra-assess-api/project/project/metals.sbt
+2025.11.21 10:03:42 INFO  [info] welcome to sbt 1.11.7 (Eclipse Adoptium Java 21.0.3)
+2025.11.21 10:03:42 INFO  no build target found for /Users/jamil/git/pra-assess-api/project/project/metals.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:03:43 INFO  [info] loading settings for project pra-assess-api-build-build-build from metals.sbt...
+2025.11.21 10:03:43 INFO  [info] loading project definition from /Users/jamil/git/pra-assess-api/project/project/project
+2025.11.21 10:03:45 INFO  [info] loading settings for project pra-assess-api-build-build from metals.sbt...
+2025.11.21 10:03:45 INFO  [info] loading project definition from /Users/jamil/git/pra-assess-api/project/project
+2025.11.21 10:03:47 INFO  [success] Generated .bloop/pra-assess-api-build-build.json
+2025.11.21 10:03:47 INFO  [success] Total time: 2 s, completed Nov 21, 2025, 10:03:47 AM
+2025.11.21 10:03:49 INFO  [info] loading settings for project pra-assess-api-build from metals.sbt, plugins.sbt...
+2025.11.21 10:03:49 INFO  [info] loading project definition from /Users/jamil/git/pra-assess-api/project
+2025.11.21 10:03:51 INFO  [success] Generated .bloop/pra-assess-api-build.json
+2025.11.21 10:03:51 INFO  [success] Total time: 3 s, completed Nov 21, 2025, 10:03:52 AM
+2025.11.21 10:03:52 INFO  [error] [/Users/jamil/git/pra-assess-api/build.sbt]:12: ')' expected but string literal found.
+2025.11.21 10:03:52 INFO  [error] [/Users/jamil/git/pra-assess-api/build.sbt]:26: ';' expected but ')' found.
+2025.11.21 10:03:52 INFO  [warn] Project loading failed: (r)etry, (q)uit, (l)ast, or (i)gnore? (default: r)
+2025.11.21 10:03:52 INFO  time: ran 'sbt bloopInstall' in 12s
+2025.11.21 10:03:52 ERROR sbt command failed: /Users/jamil/.sdkman/candidates/sbt/current/bin/sbt -Dbloop.export-jar-classifiers=sources bloopInstall
+2025.11.21 10:03:52 WARN  no build target for: /Users/jamil/git/pra-assess-api/build.sbt
+2025.11.21 10:03:52 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sc. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:03:52 WARN  no build target for: /Users/jamil/git/pra-assess-api/build.sc
+2025.11.21 10:03:52 WARN  no build target for: /Users/jamil/git/pra-assess-api/project/plugins.sbt
+2025.11.21 10:03:53 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:03:52 INFO  no build target found for /Users/jamil/git/pra-assess-api/project/plugins.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:10 INFO  sbt 1.11.7 found for workspace.
+2025.11.21 10:04:10 WARN  no build target for: /Users/jamil/git/pra-assess-api/project/metals.sbt
+2025.11.21 10:04:10 WARN  no build target for: /Users/jamil/git/pra-assess-api/project/project/metals.sbt
+2025.11.21 10:04:11 INFO  [info] welcome to sbt 1.11.7 (Eclipse Adoptium Java 21.0.3)
+2025.11.21 10:04:11 INFO  [info] loading project definition from /Users/jamil/git/pra-assess-api/project/project/project
+2025.11.21 10:04:12 INFO  [info] loading project definition from /Users/jamil/git/pra-assess-api/project/project
+2025.11.21 10:04:13 INFO  [info] loading settings for project pra-assess-api-build from plugins.sbt...
+2025.11.21 10:04:13 INFO  [info] loading project definition from /Users/jamil/git/pra-assess-api/project
+2025.11.21 10:04:13 INFO  [error] [/Users/jamil/git/pra-assess-api/build.sbt]:12: ')' expected but string literal found.
+2025.11.21 10:04:13 INFO  [error] [/Users/jamil/git/pra-assess-api/build.sbt]:26: ';' expected but ')' found.
+2025.11.21 10:04:13 INFO  [warn] Project loading failed: (r)etry, (q)uit, (l)ast, or (i)gnore? (default: r)
+2025.11.21 10:04:14 INFO  time: ran 'sbt bspConfig' in 4.73s
+2025.11.21 10:04:14 ERROR Creation of .bsp/sbt failed with exit code: 1
+2025.11.21 10:04:21 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:24 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:25 WARN  no build target for: /Users/jamil/git/pra-assess-api/build.sbt
+2025.11.21 10:04:24 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:25 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:24 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:26 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:26 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:26 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:33 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:33 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:33 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:33 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:35 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:35 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:36 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:36 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:36 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:36 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:36 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:36 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:36 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:36 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:36 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:37 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:37 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:37 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:37 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:37 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:37 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:37 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:37 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:37 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:37 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:38 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:38 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:39 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:39 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:39 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:39 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:39 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:39 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:39 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:39 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:39 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:39 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:40 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:40 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:40 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:40 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:41 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:40 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:40 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:40 ERROR scalafmt: /Users/jamil/git/pra-assess-api/build.sbt:11: error: [dialect scala3] ) expected but string constant found
+  coverageExcludedFiles := """|.*handlers.*;
+                           ^
+2025.11.21 10:04:41 WARN  no build target for: /Users/jamil/git/pra-assess-api/build.sbt
+2025.11.21 10:04:41 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:41 INFO  sbt 1.11.7 found for workspace.
+2025.11.21 10:04:41 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:42 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:43 INFO  [info] welcome to sbt 1.11.7 (Eclipse Adoptium Java 21.0.3)
+2025.11.21 10:04:43 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:43 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:43 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:43 INFO  [info] loading project definition from /Users/jamil/git/pra-assess-api/project/project/project
+2025.11.21 10:04:44 INFO  [info] loading project definition from /Users/jamil/git/pra-assess-api/project/project
+2025.11.21 10:04:44 INFO  [info] loading settings for project pra-assess-api-build from plugins.sbt...
+2025.11.21 10:04:44 INFO  [info] loading project definition from /Users/jamil/git/pra-assess-api/project
+2025.11.21 10:04:44 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:44 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:44 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:44 INFO  [error] [/Users/jamil/git/pra-assess-api/build.sbt]:11: ')' expected but string literal found.
+2025.11.21 10:04:44 INFO  [error] [/Users/jamil/git/pra-assess-api/build.sbt]:25: ';' expected but ')' found.
+2025.11.21 10:04:44 INFO  [warn] Project loading failed: (r)etry, (q)uit, (l)ast, or (i)gnore? (default: r)
+2025.11.21 10:04:45 INFO  time: ran 'sbt bspConfig' in 3.68s
+2025.11.21 10:04:45 ERROR Creation of .bsp/sbt failed with exit code: 1
+2025.11.21 10:04:46 INFO  no build target found for /Users/jamil/git/pra-assess-api/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:46 WARN  no build target for: /Users/jamil/git/pra-assess-api/app/controllers/HomeController.scala
+2025.11.21 10:04:46 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:50 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:53 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:53 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:04:53 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:05:29 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:05:29 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:05:29 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:05:29 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:05:29 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:05:29 WARN  no build target for: /Users/jamil/git/pra-assess-api/build.sbt
+2025.11.21 10:05:29 INFO  sbt 1.11.7 found for workspace.
+2025.11.21 10:05:29 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:05:29 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:05:33 INFO  [info] welcome to sbt 1.11.7 (Eclipse Adoptium Java 21.0.3)
+2025.11.21 10:05:35 INFO  [info] loading project definition from /Users/jamil/git/pra-assess-api/project/project/project
+2025.11.21 10:05:36 INFO  [info] loading project definition from /Users/jamil/git/pra-assess-api/project/project
+2025.11.21 10:05:36 INFO  [info] loading settings for project pra-assess-api-build from plugins.sbt...
+2025.11.21 10:05:36 INFO  [info] loading project definition from /Users/jamil/git/pra-assess-api/project
+2025.11.21 10:05:39 INFO  [info] loading settings for project root from build.sbt...
+2025.11.21 10:05:39 INFO  [info]   __              __
+2025.11.21 10:05:39 INFO  [info]   \ \     ____   / /____ _ __  __
+2025.11.21 10:05:39 INFO  [info]    \ \   / __ \ / // __ `// / / /
+2025.11.21 10:05:39 INFO  [info]    / /  / /_/ // // /_/ // /_/ /
+2025.11.21 10:05:39 INFO  [info]   /_/  / .___//_/ \__,_/ \__, /
+2025.11.21 10:05:39 INFO  [info]       /_/               /____/
+2025.11.21 10:05:39 INFO  [info] 
+2025.11.21 10:05:39 INFO  [info] Version 3.0.9 running Java 21.0.3
+2025.11.21 10:05:39 INFO  [info] 
+2025.11.21 10:05:39 INFO  [info] Play is run entirely by the community. Please consider contributing and/or donating:
+2025.11.21 10:05:39 INFO  [info] https://www.playframework.com/sponsors
+2025.11.21 10:05:39 INFO  [info] 
+2025.11.21 10:05:39 INFO  [success] Total time: 0 s, completed Nov 21, 2025, 10:05:40 AM
+2025.11.21 10:05:40 INFO  time: ran 'sbt bspConfig' in 10s
+2025.11.21 10:05:40 INFO  Attempting to connect to the build server...
+2025.11.21 10:05:40 INFO  Running BSP server List(/Users/jamil/.sdkman/candidates/java/21.0.3-tem/bin/java, -Xms100m, -Xmx100m, -classpath, /Users/jamil/.sdkman/candidates/sbt/1.10.7/bin/sbt-launch.jar, -Dsbt.script=/Users/jamil/.sdkman/candidates/sbt/current/bin/sbt, xsbt.boot.Boot, -bsp)
+2025.11.21 10:05:40 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/jamil/git/pra-assess-api/.metals/bsp.trace.json or /Users/jamil/Library/Caches/org.scalameta.metals/bsp.trace.json
+2025.11.21 10:05:41 INFO  no build target found for /Users/jamil/git/pra-assess-api/project/metals.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:05:41 WARN  no build target for: /Users/jamil/git/pra-assess-api/project/metals.sbt
+2025.11.21 10:05:41 WARN  no build target for: /Users/jamil/git/pra-assess-api/project/project/metals.sbt
+2025.11.21 10:05:41 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:05:41 INFO  no build target found for /Users/jamil/git/pra-assess-api/project/project/metals.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:05:41 INFO  BSP server: [info] server was not detected. starting an instance
+2025.11.21 10:05:44 INFO  BSP server: [info] welcome to sbt 1.11.7 (Eclipse Adoptium Java 21.0.3)
+2025.11.21 10:05:44 INFO  BSP server: [info] loading project definition from /Users/jamil/git/pra-assess-api/project/project/project
+2025.11.21 10:05:46 INFO  BSP server: [info] loading settings for project pra-assess-api-build-build from metals.sbt...
+2025.11.21 10:05:46 INFO  BSP server: [info] loading project definition from /Users/jamil/git/pra-assess-api/project/project
+2025.11.21 10:05:47 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:05:47 INFO  BSP server: [info] loading settings for project pra-assess-api-build from metals.sbt, plugins.sbt...
+2025.11.21 10:05:47 INFO  BSP server: [info] loading project definition from /Users/jamil/git/pra-assess-api/project
+2025.11.21 10:05:52 INFO  BSP server: [info] loading settings for project root from build.sbt...
+2025.11.21 10:05:52 INFO  BSP server: [info]   __              __
+2025.11.21 10:05:52 INFO  BSP server: [info]   \ \     ____   / /____ _ __  __
+2025.11.21 10:05:52 INFO  BSP server: [info]    \ \   / __ \ / // __ `// / / /
+2025.11.21 10:05:52 INFO  BSP server: [info]    / /  / /_/ // // /_/ // /_/ /
+2025.11.21 10:05:52 INFO  BSP server: [info]   /_/  / .___//_/ \__,_/ \__, /
+2025.11.21 10:05:52 INFO  BSP server: [info]       /_/               /____/
+2025.11.21 10:05:52 INFO  BSP server: [info] 
+2025.11.21 10:05:52 INFO  BSP server: [info] Version 3.0.9 running Java 21.0.3
+2025.11.21 10:05:52 INFO  BSP server: [info] 
+2025.11.21 10:05:52 INFO  BSP server: [info] Play is run entirely by the community. Please consider contributing and/or donating:
+2025.11.21 10:05:52 INFO  BSP server: [info] https://www.playframework.com/sponsors
+2025.11.21 10:05:52 INFO  BSP server: [info] 
+2025.11.21 10:05:52 INFO  BSP server: [info] sbt server started at local:///Users/jamil/.sbt/1.0/server/9aeb5e846f58a4510468/sock
+2025.11.21 10:05:52 INFO  BSP server: [info] started sbt server
+2025.11.21 10:05:53 INFO  Processing workspace/reload
+2025.11.21 10:05:53 INFO  compiling pra-assess-api-build-build-build
+2025.11.21 10:05:54 INFO  no build target found for /Users/jamil/git/pra-assess-api/build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.21 10:05:53 INFO  compiling pra-assess-api-build-build
+2025.11.21 10:05:53 INFO  compiling pra-assess-api-build
+2025.11.21 10:05:56 INFO  time: Connected to build server in 15s
+2025.11.21 10:05:56 INFO  Connected to Build server: sbt v1.11.7
+2025.11.21 10:05:56 INFO  Processing workspace/buildTargets
+2025.11.21 10:05:58 INFO  Processing buildTarget/scalacOptions
+2025.11.21 10:05:58 INFO  Processing buildTarget/sources
+2025.11.21 10:05:58 INFO  Processing buildTarget/dependencySources
+2025.11.21 10:06:11 INFO  time: Imported build in 15s
+2025.11.21 10:06:12 WARN  3.3.3 is no longer supported in the current Metals versions, using the last known supported version 1.5.1
+2025.11.21 10:06:17 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.11.21 10:06:41 INFO  time: indexed workspace in 30s
+2025.11.21 10:06:41 WARN  sbt does not support `buildTarget/inverseSources`, unable to fetch targets owning source.
+2025.11.21 10:06:41 WARN  no build target for: /Users/jamil/git/pra-assess-api/project/plugins.sbt
+2025.11.21 10:06:41 INFO  Processing buildTarget/scalaTestClasses
+2025.11.21 10:06:41 INFO  compiling root
+2025.11.21 10:06:41 INFO  compiling 7 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.21 10:06:51 INFO  done compiling
+2025.11.21 10:06:51 INFO  time: compiled root in 8.76s
+2025.11.21 10:06:51 INFO  compiling root-test
+2025.11.21 10:06:51 INFO  compiling 1 Scala source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/test-classes ...
+2025.11.21 10:06:55 INFO  done compiling
+2025.11.21 10:06:55 INFO  time: compiled root-test in 4.66s
+2025.11.21 10:06:55 INFO  Processing buildTarget/scalaMainClasses
+2025.11.21 10:06:55 INFO  compiling root
+2025.11.21 10:06:56 INFO  compiling root-test
+2025.11.21 10:06:56 INFO  Processing buildTarget/compile
+2025.11.21 10:06:56 INFO  compiling root
+2025.11.21 10:06:56 INFO  compiling root-test
+2025.11.21 10:06:57 INFO  Skipping reload with status 'Installed'
+2025.11.21 10:06:56 INFO  Processing buildTarget/compile
+2025.11.21 10:06:56 INFO  Processing buildTarget/scalaMainClasses
+2025.11.21 10:06:56 INFO  compiling root
+2025.11.21 10:06:56 INFO  compiling root-test
+2025.11.21 10:06:56 INFO  Processing buildTarget/scalaTestClasses
+2025.11.21 10:06:58 INFO  compiling root
+2025.11.21 10:06:58 INFO  compiling root-test
+2025.11.21 10:07:00 INFO  time: code lens generation in 3.38s
+2025.11.21 10:07:00 INFO  Processing buildTarget/jvmRunEnvironment
+2025.11.21 10:07:53 INFO  Processing buildTarget/compile
+2025.11.21 10:08:53 INFO  Processing buildTarget/compile
+2025.11.21 10:09:53 INFO  Processing buildTarget/compile
+2025.11.21 10:10:53 INFO  Processing buildTarget/compile
+2025.11.21 10:11:53 INFO  Processing buildTarget/compile
+2025.11.21 10:12:53 INFO  Processing buildTarget/compile
+2025.11.21 10:13:53 INFO  Processing buildTarget/compile
+2025.11.21 10:14:53 INFO  Processing buildTarget/compile
+2025.11.21 10:15:53 INFO  Processing buildTarget/compile
+2025.11.21 10:16:53 INFO  Processing buildTarget/compile
+Nov 22, 2025 4:00:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 143
+Nov 22, 2025 4:02:00 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 151
+2025.11.23 11:51:54 INFO  Processing buildTarget/compile
+2025.11.23 11:52:13 INFO  Processing buildTarget/compile
+2025.11.23 11:52:14 INFO  compiling root
+2025.11.23 11:52:14 INFO  compiling 1 Scala source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 11:52:19 INFO  done compiling
+2025.11.23 11:52:19 INFO  time: compiled root in 4.52s
+2025.11.23 11:52:19 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 11:52:19 INFO  compiling root
+2025.11.23 11:52:19 INFO  compiling 2 Scala sources to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 11:52:19 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:10:37 
+10 |class GitHubConnector @Inject() (ws: WSClient, config: Configuration)(implicit ec: ExecutionContext) {
+   |                                     ^
+   |                                 Cyclic reference involving val <import>
+   |
+   | longer explanation available when compiling with `-explain`
+2025.11.23 11:52:21 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 11:52:21 ERROR two errors found
+2025.11.23 11:52:21 INFO  time: compiled root in 1.88s
+2025.11.23 11:52:21 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 11:52:21 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 11:52:21 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 11:52:21 INFO  Processing buildTarget/compile
+2025.11.23 11:52:21 INFO  compiling root
+2025.11.23 11:52:21 INFO  compiling 2 Scala sources to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 11:52:21 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:10:37 
+10 |class GitHubConnector @Inject() (ws: WSClient, config: Configuration)(implicit ec: ExecutionContext) {
+   |                                     ^
+   |                                 Cyclic reference involving val <import>
+   |
+   | longer explanation available when compiling with `-explain`
+2025.11.23 11:52:21 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 11:52:21 ERROR two errors found
+2025.11.23 11:52:21 INFO  time: compiled root in 0.3s
+2025.11.23 11:52:21 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 11:52:22 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 11:52:21 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 11:52:21 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 11:52:21 INFO  compiling root
+2025.11.23 11:52:21 INFO  compiling 2 Scala sources to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 11:52:21 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:10:37 
+10 |class GitHubConnector @Inject() (ws: WSClient, config: Configuration)(implicit ec: ExecutionContext) {
+   |                                     ^
+   |                                 Cyclic reference involving val <import>
+   |
+   | longer explanation available when compiling with `-explain`
+2025.11.23 11:52:22 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 11:52:22 ERROR two errors found
+2025.11.23 11:52:22 INFO  time: compiled root in 0.47s
+2025.11.23 11:52:22 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 11:52:22 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 11:52:26 INFO  Processing buildTarget/compile
+2025.11.23 11:52:40 INFO  Processing buildTarget/compile
+2025.11.23 11:52:40 INFO  compiling root
+2025.11.23 11:52:40 INFO  compiling 3 Scala sources to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 11:52:42 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 11:52:42 ERROR -- [E006] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GeminiConnector.scala:8:7 
+8 |import akka.stream.Materializer
+  |       ^^^^
+  |       Not found: akka
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 11:52:42 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GeminiConnector.scala:5:10 
+5 |import io.cequence.openaiservice.OpenAIServiceFactory
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 11:52:44 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GeminiConnector.scala:6:10 
+6 |import io.cequence.openaiservice.domain.{ChatRole, MessageSpec}
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 11:52:44 ERROR four errors found
+2025.11.23 11:52:44 INFO  time: compiled root in 2.88s
+2025.11.23 11:52:44 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 11:52:44 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 11:52:44 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 11:52:44 INFO  compiling root
+2025.11.23 11:52:44 INFO  compiling 3 Scala sources to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 11:52:44 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 11:52:44 ERROR -- [E006] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GeminiConnector.scala:8:7 
+8 |import akka.stream.Materializer
+  |       ^^^^
+  |       Not found: akka
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 11:52:44 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GeminiConnector.scala:5:10 
+5 |import io.cequence.openaiservice.OpenAIServiceFactory
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 11:52:45 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GeminiConnector.scala:6:10 
+6 |import io.cequence.openaiservice.domain.{ChatRole, MessageSpec}
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 11:52:45 ERROR four errors found
+2025.11.23 11:52:45 INFO  time: compiled root in 1.41s
+2025.11.23 11:52:45 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 11:52:45 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 11:52:45 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 11:52:45 INFO  compiling root
+2025.11.23 11:52:45 INFO  compiling 3 Scala sources to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 11:52:45 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 11:52:45 ERROR -- [E006] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GeminiConnector.scala:8:7 
+8 |import akka.stream.Materializer
+  |       ^^^^
+  |       Not found: akka
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 11:52:45 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GeminiConnector.scala:5:10 
+5 |import io.cequence.openaiservice.OpenAIServiceFactory
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 11:52:45 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GeminiConnector.scala:6:10 
+6 |import io.cequence.openaiservice.domain.{ChatRole, MessageSpec}
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 11:52:45 ERROR four errors found
+2025.11.23 11:52:46 INFO  time: compiled root in 0.87s
+2025.11.23 11:52:46 INFO  Processing buildTarget/compile
+2025.11.23 11:52:46 INFO  compiling root
+2025.11.23 11:52:46 INFO  compiling 3 Scala sources to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 11:52:46 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 11:52:46 ERROR -- [E006] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GeminiConnector.scala:8:7 
+8 |import akka.stream.Materializer
+  |       ^^^^
+  |       Not found: akka
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 11:52:46 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GeminiConnector.scala:5:10 
+5 |import io.cequence.openaiservice.OpenAIServiceFactory
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 11:52:47 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GeminiConnector.scala:6:10 
+6 |import io.cequence.openaiservice.domain.{ChatRole, MessageSpec}
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 11:52:47 ERROR four errors found
+2025.11.23 11:52:47 INFO  time: compiled root in 0.72s
+2025.11.23 11:52:47 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 11:52:47 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 11:52:47 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 11:52:47 INFO  compiling root
+2025.11.23 11:52:47 INFO  compiling 3 Scala sources to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 11:52:47 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 11:52:47 ERROR -- [E006] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GeminiConnector.scala:8:7 
+8 |import akka.stream.Materializer
+  |       ^^^^
+  |       Not found: akka
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 11:52:49 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GeminiConnector.scala:5:10 
+5 |import io.cequence.openaiservice.OpenAIServiceFactory
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 11:52:49 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GeminiConnector.scala:6:10 
+6 |import io.cequence.openaiservice.domain.{ChatRole, MessageSpec}
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 11:52:49 ERROR four errors found
+2025.11.23 11:52:49 INFO  time: compiled root in 1.22s
+2025.11.23 11:52:49 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 11:52:49 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 11:52:49 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 11:52:49 INFO  compiling root
+2025.11.23 11:52:49 INFO  compiling 3 Scala sources to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 11:52:49 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 11:52:49 ERROR -- [E006] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GeminiConnector.scala:8:7 
+8 |import akka.stream.Materializer
+  |       ^^^^
+  |       Not found: akka
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 11:52:49 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GeminiConnector.scala:5:10 
+5 |import io.cequence.openaiservice.OpenAIServiceFactory
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 11:52:49 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GeminiConnector.scala:6:10 
+6 |import io.cequence.openaiservice.domain.{ChatRole, MessageSpec}
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 11:52:50 ERROR four errors found
+2025.11.23 11:52:50 INFO  time: compiled root in 0.67s
+2025.11.23 11:53:00 INFO  Processing buildTarget/compile
+2025.11.23 11:53:00 INFO  compiling root
+2025.11.23 11:53:00 INFO  time: compiled root in 46ms
+2025.11.23 11:53:00 INFO  compiling root-test
+2025.11.23 11:53:00 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 11:53:00 INFO  compiling root
+2025.11.23 11:53:00 INFO  compiling root-test
+2025.11.23 11:53:00 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 11:53:01 INFO  compiling root
+2025.11.23 11:53:01 INFO  compiling root-test
+2025.11.23 11:53:01 INFO  Processing buildTarget/compile
+2025.11.23 11:53:01 INFO  compiling root
+2025.11.23 11:53:01 INFO  Processing buildTarget/compile
+2025.11.23 11:53:01 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 11:53:01 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 11:53:01 INFO  compiling root
+2025.11.23 11:53:26 INFO  Processing buildTarget/compile
+2025.11.23 11:54:26 INFO  Processing buildTarget/compile
+2025.11.23 11:55:26 INFO  Processing buildTarget/compile
+2025.11.23 11:56:26 INFO  Processing buildTarget/compile
+2025.11.23 11:57:26 INFO  Processing buildTarget/compile
+2025.11.23 11:58:26 INFO  Processing buildTarget/compile
+2025.11.23 11:59:26 INFO  Processing buildTarget/compile
+2025.11.23 12:00:26 INFO  Processing buildTarget/compile
+2025.11.23 12:01:26 INFO  Processing buildTarget/compile
+2025.11.23 12:02:26 INFO  Processing buildTarget/compile
+2025.11.23 12:13:07 INFO  Processing buildTarget/compile
+2025.11.23 12:13:09 INFO  Processing buildTarget/compile
+2025.11.23 12:13:09 INFO  compiling root
+2025.11.23 12:13:09 INFO  compiling 1 Scala source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:13:09 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:37 
+9 |class GitHubConnector @Inject() (ws: WSClient)(implicit ec: ExecutionContext) {
+  |                                     ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:13:10 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:13:10 ERROR two errors found
+2025.11.23 12:13:10 INFO  time: compiled root in 0.84s
+2025.11.23 12:13:10 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:13:10 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:13:10 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:13:10 INFO  compiling root
+2025.11.23 12:13:10 INFO  compiling 1 Scala source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:13:10 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:37 
+9 |class GitHubConnector @Inject() (ws: WSClient)(implicit ec: ExecutionContext) {
+  |                                     ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:13:11 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:13:11 ERROR two errors found
+2025.11.23 12:13:11 INFO  time: compiled root in 0.98s
+2025.11.23 12:13:11 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:13:11 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:13:11 INFO  Processing buildTarget/compile
+2025.11.23 12:13:11 INFO  compiling root
+2025.11.23 12:13:11 INFO  compiling 1 Scala source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:13:11 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:37 
+9 |class GitHubConnector @Inject() (ws: WSClient)(implicit ec: ExecutionContext) {
+  |                                     ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:13:11 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:13:12 ERROR two errors found
+2025.11.23 12:13:12 INFO  time: compiled root in 0.86s
+2025.11.23 12:13:12 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:13:11 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:13:12 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:13:12 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:13:12 INFO  compiling root
+2025.11.23 12:13:12 INFO  compiling 1 Scala source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:13:12 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:37 
+9 |class GitHubConnector @Inject() (ws: WSClient)(implicit ec: ExecutionContext) {
+  |                                     ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:13:12 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:13:12 ERROR two errors found
+2025.11.23 12:13:12 INFO  time: compiled root in 0.7s
+2025.11.23 12:13:12 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:13:13 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:13:12 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:13:26 INFO  Processing buildTarget/compile
+2025.11.23 12:13:39 INFO  Processing buildTarget/compile
+2025.11.23 12:13:39 INFO  compiling root
+2025.11.23 12:13:39 INFO  compiling 2 Scala sources to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:13:39 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:37 
+9 |class GitHubConnector @Inject() (ws: WSClient)(implicit ec: ExecutionContext) {
+  |                                     ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:13:41 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:13:41 ERROR two errors found
+2025.11.23 12:13:41 INFO  time: compiled root in 1.16s
+2025.11.23 12:13:41 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:13:41 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:13:41 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:13:41 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:13:41 INFO  compiling root
+2025.11.23 12:13:41 INFO  compiling 2 Scala sources to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:13:41 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:37 
+9 |class GitHubConnector @Inject() (ws: WSClient)(implicit ec: ExecutionContext) {
+  |                                     ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:13:42 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:13:42 ERROR two errors found
+2025.11.23 12:13:42 INFO  time: compiled root in 1.05s
+2025.11.23 12:13:42 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:13:42 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:13:42 INFO  Processing buildTarget/compile
+2025.11.23 12:13:42 INFO  compiling root
+2025.11.23 12:13:42 INFO  compiling 3 Scala sources to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:13:42 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:37 
+9 |class GitHubConnector @Inject() (ws: WSClient)(implicit ec: ExecutionContext) {
+  |                                     ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:13:42 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:13:42 ERROR two errors found
+2025.11.23 12:13:42 INFO  time: compiled root in 0.62s
+2025.11.23 12:13:42 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:13:43 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:13:42 INFO  Processing buildTarget/compile
+2025.11.23 12:13:42 INFO  compiling root
+2025.11.23 12:13:42 INFO  compiling 3 Scala sources to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:13:43 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:37 
+9 |class GitHubConnector @Inject() (ws: WSClient)(implicit ec: ExecutionContext) {
+  |                                     ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:13:43 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:13:44 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:10 
+5 |import io.cequence.openaiscala.service.OpenAIServiceFactory
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:13:46 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:6:10 
+6 |import io.cequence.openaiscala.domain.settings.CreateChatCompletionSettings
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:13:46 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:10 
+7 |import io.cequence.openaiscala.domain.{ChatRole, SystemMessage, UserMessage}
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:13:46 ERROR 5 errors found
+2025.11.23 12:13:46 INFO  time: compiled root in 3.39s
+2025.11.23 12:13:46 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:13:46 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:13:46 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:13:46 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:13:46 INFO  compiling root
+2025.11.23 12:13:46 INFO  compiling 3 Scala sources to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:13:46 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:37 
+9 |class GitHubConnector @Inject() (ws: WSClient)(implicit ec: ExecutionContext) {
+  |                                     ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:13:47 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:13:47 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:10 
+5 |import io.cequence.openaiscala.service.OpenAIServiceFactory
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:13:47 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:6:10 
+6 |import io.cequence.openaiscala.domain.settings.CreateChatCompletionSettings
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:13:48 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:10 
+7 |import io.cequence.openaiscala.domain.{ChatRole, SystemMessage, UserMessage}
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:13:48 ERROR 5 errors found
+2025.11.23 12:13:48 INFO  time: compiled root in 1.78s
+2025.11.23 12:13:48 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:13:48 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:13:48 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:13:48 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:13:48 INFO  compiling root
+2025.11.23 12:13:48 INFO  compiling 3 Scala sources to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:13:48 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:37 
+9 |class GitHubConnector @Inject() (ws: WSClient)(implicit ec: ExecutionContext) {
+  |                                     ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:13:48 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:13:48 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:10 
+5 |import io.cequence.openaiscala.service.OpenAIServiceFactory
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:13:50 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:6:10 
+6 |import io.cequence.openaiscala.domain.settings.CreateChatCompletionSettings
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:13:50 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:10 
+7 |import io.cequence.openaiscala.domain.{ChatRole, SystemMessage, UserMessage}
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:13:50 ERROR 5 errors found
+2025.11.23 12:13:50 INFO  time: compiled root in 1s
+2025.11.23 12:13:50 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:13:50 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:14:01 INFO  Processing buildTarget/compile
+2025.11.23 12:14:01 INFO  compiling root
+2025.11.23 12:14:01 INFO  compiling 4 Scala sources to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:14:01 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:37 
+9 |class GitHubConnector @Inject() (ws: WSClient)(implicit ec: ExecutionContext) {
+  |                                     ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:14:01 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:14:02 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:10 
+5 |import io.cequence.openaiscala.service.OpenAIServiceFactory
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:14:02 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:6:10 
+6 |import io.cequence.openaiscala.domain.settings.CreateChatCompletionSettings
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:14:02 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:10 
+7 |import io.cequence.openaiscala.domain.{ChatRole, SystemMessage, UserMessage}
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:14:02 ERROR 5 errors found
+2025.11.23 12:14:02 INFO  time: compiled root in 1.29s
+2025.11.23 12:14:02 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:14:03 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:14:02 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:14:02 INFO  compiling root
+2025.11.23 12:14:02 INFO  compiling 5 Scala sources to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:14:02 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:37 
+9 |class GitHubConnector @Inject() (ws: WSClient)(implicit ec: ExecutionContext) {
+  |                                     ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:14:02 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:14:04 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/controllers/AssessmentController.scala:29:40 
+29 |      Ok.chunked(source).as(EventSource.ContentType)
+   |                            ^^^^^^^^^^^^^^^^^^^^^^^
+   |   value ContentType is not a member of object play.api.libs.EventSource
+2025.11.23 12:14:04 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:10 
+5 |import io.cequence.openaiscala.service.OpenAIServiceFactory
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:14:04 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:6:10 
+6 |import io.cequence.openaiscala.domain.settings.CreateChatCompletionSettings
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:14:04 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:10 
+7 |import io.cequence.openaiscala.domain.{ChatRole, SystemMessage, UserMessage}
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:14:04 ERROR 6 errors found
+2025.11.23 12:14:04 INFO  time: compiled root in 1.8s
+2025.11.23 12:14:04 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:14:05 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:14:04 INFO  Processing buildTarget/compile
+2025.11.23 12:14:04 INFO  compiling root
+2025.11.23 12:14:04 INFO  compiling 5 Scala sources to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:14:04 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:37 
+9 |class GitHubConnector @Inject() (ws: WSClient)(implicit ec: ExecutionContext) {
+  |                                     ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:14:05 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:14:05 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/controllers/AssessmentController.scala:29:40 
+29 |      Ok.chunked(source).as(EventSource.ContentType)
+   |                            ^^^^^^^^^^^^^^^^^^^^^^^
+   |   value ContentType is not a member of object play.api.libs.EventSource
+2025.11.23 12:14:05 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:10 
+5 |import io.cequence.openaiscala.service.OpenAIServiceFactory
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:14:05 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:6:10 
+6 |import io.cequence.openaiscala.domain.settings.CreateChatCompletionSettings
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:14:05 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:10 
+7 |import io.cequence.openaiscala.domain.{ChatRole, SystemMessage, UserMessage}
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:14:05 ERROR 6 errors found
+2025.11.23 12:14:05 INFO  time: compiled root in 0.88s
+2025.11.23 12:14:05 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:14:06 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:14:05 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:14:05 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:14:05 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:14:05 INFO  compiling root
+2025.11.23 12:14:05 INFO  compiling 5 Scala sources to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:14:05 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:37 
+9 |class GitHubConnector @Inject() (ws: WSClient)(implicit ec: ExecutionContext) {
+  |                                     ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:14:05 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:14:06 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/controllers/AssessmentController.scala:29:40 
+29 |      Ok.chunked(source).as(EventSource.ContentType)
+   |                            ^^^^^^^^^^^^^^^^^^^^^^^
+   |   value ContentType is not a member of object play.api.libs.EventSource
+2025.11.23 12:14:06 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:10 
+5 |import io.cequence.openaiscala.service.OpenAIServiceFactory
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:14:06 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:6:10 
+6 |import io.cequence.openaiscala.domain.settings.CreateChatCompletionSettings
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:14:06 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:10 
+7 |import io.cequence.openaiscala.domain.{ChatRole, SystemMessage, UserMessage}
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:14:06 ERROR 6 errors found
+2025.11.23 12:14:06 INFO  time: compiled root in 0.85s
+2025.11.23 12:14:06 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:14:06 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:14:21 INFO  Processing buildTarget/compile
+2025.11.23 12:14:21 ERROR (Compile / playRoutes) @8bfp66m21: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+2025.11.23 12:14:22 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / playRoutes) @8bfp66m21: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:14:21 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:14:22 ERROR (Compile / playRoutes) @8bfp66mh2: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+2025.11.23 12:14:22 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / playRoutes) @8bfp66mh2: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:14:22 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:14:22 INFO  Scala test classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / playRoutes) @8bfp66n08: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:14:22 ERROR (Compile / playRoutes) @8bfp66n08: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+2025.11.23 12:14:22 INFO  Processing buildTarget/compile
+2025.11.23 12:14:22 ERROR (Compile / playRoutes) @8bfp66n78: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+2025.11.23 12:14:22 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / playRoutes) @8bfp66n78: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:14:22 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:14:22 INFO  Scala test classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / playRoutes) @8bfp66nb7: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:14:22 ERROR (Compile / playRoutes) @8bfp66nb7: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+2025.11.23 12:14:22 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:14:22 ERROR (Compile / playRoutes) @8bfp66ngh: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+2025.11.23 12:14:22 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / playRoutes) @8bfp66ngh: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:14:26 INFO  Processing buildTarget/compile
+2025.11.23 12:14:33 INFO  Processing buildTarget/compile
+2025.11.23 12:14:33 ERROR (Compile / playRoutes) @8bfp67dka: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+2025.11.23 12:14:33 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / playRoutes) @8bfp67dka: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:14:33 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:14:33 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:14:33 ERROR (Compile / playRoutes) @8bfp67edh: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+2025.11.23 12:14:34 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / playRoutes) @8bfp67edh: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:14:45 INFO  Processing buildTarget/compile
+2025.11.23 12:14:45 ERROR (Compile / playRoutes) @8bfp685m2: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+2025.11.23 12:14:46 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / playRoutes) @8bfp685m2: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:14:45 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:14:45 ERROR (Compile / playRoutes) @8bfp6861o: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+2025.11.23 12:14:46 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / playRoutes) @8bfp6861o: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:14:45 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:14:47 INFO  Processing buildTarget/compile
+2025.11.23 12:14:48 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / playRoutes) @8bfp688md: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:14:47 ERROR (Compile / playRoutes) @8bfp688md: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+2025.11.23 12:14:47 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:14:47 ERROR (Compile / playRoutes) @8bfp6891n: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+2025.11.23 12:14:48 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / playRoutes) @8bfp6891n: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:14:47 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:14:49 INFO  Processing buildTarget/compile
+2025.11.23 12:14:49 ERROR (Compile / playRoutes) @8bfp68beb: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+2025.11.23 12:14:49 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / playRoutes) @8bfp68beb: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:14:49 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:14:49 ERROR (Compile / playRoutes) @8bfp68bo0: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+2025.11.23 12:14:50 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / playRoutes) @8bfp68bo0: Compilation error[end of input expected] in /Users/jamil/git/pra-assess-api/conf/routes:8
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:14:49 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:15:16 INFO  Processing buildTarget/compile
+2025.11.23 12:15:27 INFO  Processing buildTarget/compile
+2025.11.23 12:16:26 INFO  Processing buildTarget/compile
+2025.11.23 12:16:26 INFO  compiling root
+2025.11.23 12:16:26 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:16:26 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:16:27 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:16:27 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:10 
+5 |import io.cequence.openaiscala.service.OpenAIServiceFactory
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:16:27 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:6:10 
+6 |import io.cequence.openaiscala.domain.settings.CreateChatCompletionSettings
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:16:27 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:10 
+7 |import io.cequence.openaiscala.domain.{ChatRole, SystemMessage, UserMessage}
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:16:28 ERROR /Users/jamil/git/pra-assess-api/conf/routes:7:1: method index in class HomeController must be called with () argument
+2025.11.23 12:16:28 ERROR GET     /                           controllers.HomeController.index()
+2025.11.23 12:16:28 ERROR /Users/jamil/git/pra-assess-api/conf/routes:7:1: method index in class HomeController must be called with () argument
+2025.11.23 12:16:28 ERROR GET     /                           controllers.HomeController.index()
+2025.11.23 12:16:28 ERROR 7 errors found
+2025.11.23 12:16:28 INFO  time: compiled root in 1.59s
+2025.11.23 12:16:28 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:16:28 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:16:28 INFO  Processing buildTarget/compile
+2025.11.23 12:16:28 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:16:28 INFO  compiling root
+2025.11.23 12:16:28 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:16:28 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:16:28 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:16:29 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:10 
+5 |import io.cequence.openaiscala.service.OpenAIServiceFactory
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:16:29 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:6:10 
+6 |import io.cequence.openaiscala.domain.settings.CreateChatCompletionSettings
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:16:29 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:10 
+7 |import io.cequence.openaiscala.domain.{ChatRole, SystemMessage, UserMessage}
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:16:29 ERROR 5 errors found
+2025.11.23 12:16:29 INFO  time: compiled root in 1.41s
+2025.11.23 12:16:29 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:16:29 INFO  compiling root
+2025.11.23 12:16:29 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:16:29 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:16:30 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:16:31 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:10 
+5 |import io.cequence.openaiscala.service.OpenAIServiceFactory
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:16:31 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:6:10 
+6 |import io.cequence.openaiscala.domain.settings.CreateChatCompletionSettings
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:16:31 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:10 
+7 |import io.cequence.openaiscala.domain.{ChatRole, SystemMessage, UserMessage}
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:16:31 ERROR 5 errors found
+2025.11.23 12:16:31 INFO  time: compiled root in 2.22s
+2025.11.23 12:16:31 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:16:32 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:17:01 INFO  Processing buildTarget/compile
+2025.11.23 12:17:03 INFO  Processing buildTarget/compile
+2025.11.23 12:17:03 INFO  compiling root
+2025.11.23 12:17:03 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:17:03 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:17:04 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:17:04 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:10 
+5 |import io.cequence.openaiscala.service.OpenAIServiceFactory
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:17:05 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:6:10 
+6 |import io.cequence.openaiscala.domain.settings.CreateChatCompletionSettings
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:17:05 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:10 
+7 |import io.cequence.openaiscala.domain.{ChatRole, SystemMessage, UserMessage}
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:17:05 ERROR -- [E006] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:24:35 
+24 |  private implicit val akkaSystem: akka.actor.ActorSystem     = akka.actor.ActorSystem("openai-client")
+   |                                   ^^^^
+   |                                   Not found: akka
+   |
+   | longer explanation available when compiling with `-explain`
+2025.11.23 12:17:05 ERROR -- [E006] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:25:37 
+25 |  private implicit val materializer: akka.stream.Materializer = akka.stream.Materializer(akkaSystem)
+   |                                     ^^^^
+   |                                     Not found: akka
+   |
+   | longer explanation available when compiling with `-explain`
+2025.11.23 12:17:05 ERROR -- [E172] Type Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:15:73 
+15 |  private val apiKey = config.get[String]("pra.assessment.gemini.apiKey")
+   |                                                                         ^
+   |Ambiguous given instances: both value akkaSystem in class GeminiService and value materializer in class GeminiService match type play.api.ConfigLoader[String] of parameter loader of method get in class Configuration
+2025.11.23 12:17:05 ERROR -- [E006] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:24:64 
+24 |  private implicit val akkaSystem: akka.actor.ActorSystem     = akka.actor.ActorSystem("openai-client")
+   |                                                                ^^^^
+   |                                                         Not found: akka
+   |
+   | longer explanation available when compiling with `-explain`
+2025.11.23 12:17:05 ERROR -- [E006] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:25:64 
+25 |  private implicit val materializer: akka.stream.Materializer = akka.stream.Materializer(akkaSystem)
+   |                                                                ^^^^
+   |                                                         Not found: akka
+   |
+   | longer explanation available when compiling with `-explain`
+2025.11.23 12:17:05 ERROR 10 errors found
+2025.11.23 12:17:05 INFO  time: compiled root in 2.08s
+2025.11.23 12:17:05 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:17:06 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:17:05 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:17:05 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:17:05 INFO  compiling root
+2025.11.23 12:17:05 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:17:06 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:17:06 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:17:08 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:10 
+5 |import io.cequence.openaiscala.service.OpenAIServiceFactory
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:17:08 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:6:10 
+6 |import io.cequence.openaiscala.domain.settings.CreateChatCompletionSettings
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:17:08 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:10 
+7 |import io.cequence.openaiscala.domain.{ChatRole, SystemMessage, UserMessage}
+  |       ^^^^^^^^^^^
+  |       value cequence is not a member of io
+2025.11.23 12:17:08 ERROR -- [E006] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:24:35 
+24 |  private implicit val akkaSystem: akka.actor.ActorSystem     = akka.actor.ActorSystem("openai-client")
+   |                                   ^^^^
+   |                                   Not found: akka
+   |
+   | longer explanation available when compiling with `-explain`
+2025.11.23 12:17:08 ERROR -- [E006] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:25:37 
+25 |  private implicit val materializer: akka.stream.Materializer = akka.stream.Materializer(akkaSystem)
+   |                                     ^^^^
+   |                                     Not found: akka
+   |
+   | longer explanation available when compiling with `-explain`
+2025.11.23 12:17:08 ERROR -- [E172] Type Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:15:73 
+15 |  private val apiKey = config.get[String]("pra.assessment.gemini.apiKey")
+   |                                                                         ^
+   |Ambiguous given instances: both value akkaSystem in class GeminiService and value materializer in class GeminiService match type play.api.ConfigLoader[String] of parameter loader of method get in class Configuration
+2025.11.23 12:17:08 ERROR -- [E006] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:24:64 
+24 |  private implicit val akkaSystem: akka.actor.ActorSystem     = akka.actor.ActorSystem("openai-client")
+   |                                                                ^^^^
+   |                                                         Not found: akka
+   |
+   | longer explanation available when compiling with `-explain`
+2025.11.23 12:17:08 ERROR -- [E006] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:25:64 
+25 |  private implicit val materializer: akka.stream.Materializer = akka.stream.Materializer(akkaSystem)
+   |                                                                ^^^^
+   |                                                         Not found: akka
+   |
+   | longer explanation available when compiling with `-explain`
+2025.11.23 12:17:08 ERROR 10 errors found
+2025.11.23 12:17:08 INFO  time: compiled root in 2.81s
+2025.11.23 12:17:08 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:17:09 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:17:26 INFO  Processing buildTarget/compile
+2025.11.23 12:17:35 INFO  Processing buildTarget/compile
+2025.11.23 12:18:20 INFO  Processing buildTarget/compile
+2025.11.23 12:18:23 INFO  Processing buildTarget/compile
+2025.11.23 12:18:23 INFO  compiling root
+2025.11.23 12:18:23 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:18:23 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:18:24 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:21 
+5 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:18:24 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:18:24 ERROR three errors found
+2025.11.23 12:18:24 INFO  time: compiled root in 1.02s
+2025.11.23 12:18:24 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:18:24 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:18:24 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:18:24 INFO  compiling root
+2025.11.23 12:18:24 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:18:24 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:18:26 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:21 
+5 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:18:26 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:18:26 ERROR three errors found
+2025.11.23 12:18:26 INFO  time: compiled root in 1.67s
+2025.11.23 12:18:26 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:18:26 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:18:26 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:18:26 INFO  Processing buildTarget/compile
+2025.11.23 12:19:05 INFO  Processing buildTarget/compile
+2025.11.23 12:19:05 INFO  compiling root
+2025.11.23 12:19:05 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:19:05 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:19:05 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:21 
+5 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:05 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:21 
+7 |import play.api.libs.ws.JsonBodyWritables._
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:05 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:06 ERROR four errors found
+2025.11.23 12:19:06 INFO  time: compiled root in 0.69s
+2025.11.23 12:19:06 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:19:06 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:19:06 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:19:06 INFO  compiling root
+2025.11.23 12:19:06 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:19:06 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:19:06 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:21 
+5 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:06 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:21 
+7 |import play.api.libs.ws.JsonBodyWritables._
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:06 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:06 ERROR four errors found
+2025.11.23 12:19:06 INFO  time: compiled root in 0.83s
+2025.11.23 12:19:06 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:19:07 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:19:06 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:19:26 INFO  Processing buildTarget/compile
+2025.11.23 12:19:43 INFO  Processing buildTarget/compile
+2025.11.23 12:19:43 INFO  compiling root
+2025.11.23 12:19:43 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:19:43 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:19:44 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:21 
+5 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:44 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:21 
+7 |import play.api.libs.ws.JsonBodyWritables._
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:44 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:44 ERROR four errors found
+2025.11.23 12:19:44 INFO  time: compiled root in 0.67s
+2025.11.23 12:19:44 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:19:44 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:19:44 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:19:44 INFO  compiling root
+2025.11.23 12:19:44 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:19:44 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:19:44 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:21 
+5 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:44 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:21 
+7 |import play.api.libs.ws.JsonBodyWritables._
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:44 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:44 ERROR four errors found
+2025.11.23 12:19:44 INFO  time: compiled root in 0.45s
+2025.11.23 12:19:44 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:19:45 INFO  Scala test classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:19:44 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:19:44 INFO  compiling root
+2025.11.23 12:19:44 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:19:44 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:19:44 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:21 
+5 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:44 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:21 
+7 |import play.api.libs.ws.JsonBodyWritables._
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:44 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:45 ERROR four errors found
+2025.11.23 12:19:45 INFO  time: compiled root in 0.47s
+2025.11.23 12:19:45 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:19:45 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:19:45 INFO  Processing buildTarget/compile
+2025.11.23 12:19:45 INFO  compiling root
+2025.11.23 12:19:45 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:19:45 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:19:45 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:21 
+5 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:45 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:21 
+7 |import play.api.libs.ws.JsonBodyWritables._
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:45 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:45 ERROR four errors found
+2025.11.23 12:19:45 INFO  time: compiled root in 0.51s
+2025.11.23 12:19:45 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:19:45 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:19:45 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:19:45 INFO  compiling root
+2025.11.23 12:19:45 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:19:45 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:19:45 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:21 
+5 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:46 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:21 
+7 |import play.api.libs.ws.JsonBodyWritables._
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:46 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:46 ERROR four errors found
+2025.11.23 12:19:46 INFO  time: compiled root in 0.81s
+2025.11.23 12:19:46 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:19:47 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:19:46 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:19:46 INFO  compiling root
+2025.11.23 12:19:46 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:19:46 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:19:46 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:21 
+5 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:46 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:21 
+7 |import play.api.libs.ws.JsonBodyWritables._
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:46 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:19:47 ERROR four errors found
+2025.11.23 12:19:47 INFO  time: compiled root in 0.58s
+2025.11.23 12:19:47 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:19:47 INFO  Scala test classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:20:13 INFO  Processing buildTarget/compile
+2025.11.23 12:20:13 INFO  compiling root
+2025.11.23 12:20:13 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:20:13 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:20:13 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:21 
+5 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:20:13 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:21 
+7 |import play.api.libs.ws.JsonBodyWritables._
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:20:13 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:20:14 ERROR four errors found
+2025.11.23 12:20:14 INFO  time: compiled root in 0.54s
+2025.11.23 12:20:14 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:20:14 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:20:14 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:20:14 INFO  compiling root
+2025.11.23 12:20:14 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:20:14 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:20:14 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:21 
+5 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:20:14 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:21 
+7 |import play.api.libs.ws.JsonBodyWritables._
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:20:14 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:20:14 ERROR four errors found
+2025.11.23 12:20:14 INFO  time: compiled root in 0.65s
+2025.11.23 12:20:14 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:20:14 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:20:14 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:20:14 INFO  compiling root
+2025.11.23 12:20:14 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:20:14 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:20:14 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:21 
+5 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:20:14 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:21 
+7 |import play.api.libs.ws.JsonBodyWritables._
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:20:14 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:20:15 ERROR four errors found
+2025.11.23 12:20:15 INFO  time: compiled root in 0.31s
+2025.11.23 12:20:15 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:20:15 INFO  Scala test classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:20:26 INFO  Processing buildTarget/compile
+2025.11.23 12:21:21 INFO  Processing buildTarget/compile
+2025.11.23 12:21:21 INFO  compiling root
+2025.11.23 12:21:21 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:21:21 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:21:21 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:21 
+5 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:21:21 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:21 
+7 |import play.api.libs.ws.JsonBodyWritables._
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:21:21 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:21:21 ERROR four errors found
+2025.11.23 12:21:21 INFO  time: compiled root in 0.64s
+2025.11.23 12:21:21 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:21:22 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:21:21 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:21:21 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:21:21 INFO  compiling root
+2025.11.23 12:21:22 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:21:22 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:21:22 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:21 
+5 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:21:22 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:21 
+7 |import play.api.libs.ws.JsonBodyWritables._
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:21:22 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:21:22 ERROR four errors found
+2025.11.23 12:21:22 INFO  time: compiled root in 0.96s
+2025.11.23 12:21:22 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:21:23 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:21:26 INFO  Processing buildTarget/compile
+2025.11.23 12:22:05 INFO  Processing buildTarget/compile
+2025.11.23 12:22:05 INFO  compiling root
+2025.11.23 12:22:05 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:22:05 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:22:05 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:21 
+5 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:22:06 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:21 
+7 |import play.api.libs.ws.JsonBodyWritables._
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:22:06 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:22:06 ERROR four errors found
+2025.11.23 12:22:06 INFO  time: compiled root in 0.83s
+2025.11.23 12:22:06 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:22:06 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:22:06 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:22:06 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:22:06 INFO  compiling root
+2025.11.23 12:22:06 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:22:06 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:22:06 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:21 
+5 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:22:06 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:21 
+7 |import play.api.libs.ws.JsonBodyWritables._
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:22:06 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:22:07 ERROR four errors found
+2025.11.23 12:22:07 INFO  time: compiled root in 0.98s
+2025.11.23 12:22:07 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:22:07 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:22:26 INFO  Processing buildTarget/compile
+2025.11.23 12:23:08 INFO  Processing buildTarget/compile
+2025.11.23 12:23:08 INFO  compiling root
+2025.11.23 12:23:08 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:23:08 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:23:08 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:21 
+5 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:23:08 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:21 
+7 |import play.api.libs.ws.JsonBodyWritables._
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:23:08 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:23:08 ERROR four errors found
+2025.11.23 12:23:08 INFO  time: compiled root in 0.42s
+2025.11.23 12:23:09 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:23:09 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:23:09 INFO  Processing buildTarget/scalaTestClasses
+2025.11.23 12:23:09 INFO  Processing buildTarget/scalaMainClasses
+2025.11.23 12:23:09 INFO  compiling root
+2025.11.23 12:23:09 INFO  compiling 12 Scala sources and 1 Java source to /Users/jamil/git/pra-assess-api/target/scala-3.3.3/classes ...
+2025.11.23 12:23:09 ERROR -- [E046] Cyclic Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:9:43 
+9 |class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionContext) {
+  |                                           ^
+  |                                   Cyclic reference involving val <import>
+  |
+  | longer explanation available when compiling with `-explain`
+2025.11.23 12:23:09 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:5:21 
+5 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:23:09 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/services/GeminiService.scala:7:21 
+7 |import play.api.libs.ws.JsonBodyWritables._
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:23:09 ERROR -- [E008] Not Found Error: /Users/jamil/git/pra-assess-api/app/connectors/GitHubConnector.scala:4:21 
+4 |import play.api.libs.ws.WSClient
+  |       ^^^^^^^^^^^^^^^^
+  |       value ws is not a member of play.api.libs
+2025.11.23 12:23:09 ERROR four errors found
+2025.11.23 12:23:09 INFO  time: compiled root in 0.42s
+2025.11.23 12:23:09 ERROR (Compile / compileIncremental) Compilation failed
+2025.11.23 12:23:09 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (Compile / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2025.11.23 12:23:26 INFO  Processing buildTarget/compile
+2025.11.23 12:24:26 INFO  Processing buildTarget/compile
+2025.11.23 12:25:26 INFO  Processing buildTarget/compile
