@@ -1,0 +1,26 @@
+{
+    "status": "PASS",
+    "confidence": 1,
+    "requiresReview": false,
+    "reason": "The application uses the HMRC Auth library and the `EnrolmentIdentifierAction` and `AuthenticatedIdentifierAction` to ensure all requests are authenticated and authorised. These actions verify user credentials and enrolments before allowing access to the application's resources. The `AuthController` also ensures authentication when signing out.",
+    "evidence": [
+        {
+            "filePath": "app/controllers/actions/EnrolmentIdentifierAction.scala",
+            "lineStart": 52,
+            "lineEnd": 192,
+            "snippet": "    } recover {\n      case e: NoActiveSession =>\n        logger.info(s\"EnrolmentAuthIdentifierAction - No active session, redirecting to login: ${e.getMessage}\")\n        Left(Redirect(config.loginUrl, Map(\"continue\" -> Seq(config.loginContinueUrl))))\n      case e: AuthorisationException =>\n        logger.warn(s\"EnrolmentAuthIdentifierAction - Authorisation failed: ${e.getMessage}\")\n        Left(Redirect(routes.UnauthorisedController.onPageLoad))\n    }\n  }\n\n  private def authAsOrg[A](\n    request:     Request[A],\n    internalId:  String,\n    enrolments:  Enrolments,\n    credentials: Option[Credentials]\n  ): Future[Either[Result, IdentifierRequest[A]]] = ...\n    }\n  }\n\n}"
+        },
+        {
+            "filePath": "app/controllers/auth/AuthController.scala",
+            "lineStart": 35,
+            "lineEnd": 59,
+            "snippet": "      .recover {\n        case _: NoActiveSession =>\n          Redirect(config.loginUrl, Map(\"continue\" -> Seq(config.loginContinueUrl)))\n        case _: AuthorisationException =>\n          Redirect(controllers.routes.UnauthorisedController.onPageLoad)\n      }\n  }\n\n  def signOutNoSurvey(): Action[AnyContent] = Action.async { implicit request =>\n    authorised(AuthProviders(GovernmentGateway))\n      .retrieve(Retrievals.internalId) { case Some(internalId) =>\n        sessionRepository.clear(internalId)\n      }\n      .map { _ =>\n        Redirect(config.signOutUrl, Map(\"continue\" -> Seq(routes.SignedOutController.onPageLoad.url)))\n      }\n      .recover {\n        case _: NoActiveSession =>\n          Redirect(config.loginUrl, Map(\"continue\" -> Seq(config.loginContinueUrl)))\n        case _: AuthorisationException =>\n          Redirect(controllers.routes.UnauthorisedController.onPageLoad)\n      }\n  }\n}"
+        },
+        {
+            "filePath": "app/controllers/actions/IdentifierAction.scala",
+            "lineStart": 35,
+            "lineEnd": 56,
+            "snippet": "      ) {\n\n        case Some(internalId) ~ Some(groupId) ~ enrolments ~ Some(Organisation) ~ Some(User) ~ credentials =>\n          Future.successful(\n            Right(\n              IdentifierRequest(\n                request,\n                internalId,\n                Some(groupId),\n                enrolments = enrolments.enrolments,\n                userIdForEnrolment = credentials.get.providerId\n              )\n            )\n          )\n\n        case _ ~ _ ~ Some(Organisation) ~ _ ~ _ => Future.successful(Left(Redirect(routes.UnauthorisedWrongRoleController.onPageLoad)))\n        case _ ~ _ ~ Some(Individual) ~ _ ~ _   => Future.successful(Left(Redirect(routes.UnauthorisedIndividualAffinityController.onPageLoad)))\n        case _ ~ _ ~ Some(Agent) ~ _ ~ _        => Future.successful(Left(Redirect(routes.UnauthorisedAgentAffinityController.onPageLoad)))\n        case _ =>\n          Future.successful(Left(Redirect(routes.UnauthorisedController.onPageLoad)))\n      } recover {\n      case _: NoActiveSession =>\n        Left(Redirect(config.loginUrl, Map(\"continue\" -> Seq(config.loginContinueUrl))))\n      case _: AuthorisationException =>\n        Left(Redirect(routes.UnauthorisedController.onPageLoad))\n    }"
+        }
+    ]
+}

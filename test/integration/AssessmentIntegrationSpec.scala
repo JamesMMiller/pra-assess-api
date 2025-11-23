@@ -35,11 +35,21 @@ class AssessmentIntegrationSpec extends PlaySpec with GuiceOneAppPerSuite with S
 
       // Let's just ensure it doesn't crash immediately
       val bodyText = contentAsString(result)
-      // Note: contentAsString might wait for the whole stream which could be long.
-      // For a prototype test, we might want to just check the headers or use a streaming client.
-      // However, since we are running this locally, let's see if we can get at least one chunk or just pass if 200.
+      val events   = bodyText.split("\n\n").filter(_.startsWith("data: ")).map(_.stripPrefix("data: "))
 
-      println(s"Stream started for $repoUrl")
+      events.length must be > 0
+
+      // Check that we can parse at least one result
+      val firstResult = play.api.libs.json.Json.parse(events.head)
+      (firstResult \ "status").asOpt[String] mustBe defined
+      (firstResult \ "confidence").asOpt[Double] mustBe defined
+
+      println(s"Stream finished for $repoUrl. Received ${events.length} events.")
+      println(s"First event: ${events.head}")
+      for (event <- events) {
+        println(s"Event number: ${events.indexOf(event)}")
+        println(s"Event: $event")
+      }
     }
   }
 }
