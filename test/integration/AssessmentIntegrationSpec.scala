@@ -69,5 +69,19 @@ class AssessmentIntegrationSpec extends PlaySpec with GuiceOneAppPerSuite with S
         println(s"Event: $event")
       }
     }
+
+    "accept model parameter" in {
+      val apiKey = app.configuration.getOptional[String]("pra.assessment.gemini.apiKey")
+      if (apiKey.isEmpty || apiKey.contains("MISSING_KEY")) {
+        cancel("Gemini API key not configured, skipping integration test")
+      }
+
+      val repoUrl = "https://github.com/hmrc/pillar2-frontend"
+      // Use a valid model name to ensure it doesn't error out on the API side
+      val request = FakeRequest(GET, s"/assess/stream?repoUrl=$repoUrl&model=gemini-2.0-flash")
+
+      val result = route(app, request).get
+      status(result) mustBe OK
+    }
   }
 }

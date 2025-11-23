@@ -68,6 +68,14 @@ To use a specific assessment template:
 curl -N "http://localhost:9000/assess/stream?repoUrl=https://github.com/hmrc/pillar2-frontend&templateId=mdtp-pra"
 ```
 
+### Model Selection
+
+To use a specific Gemini model (default is `gemini-2.0-flash`):
+
+```bash
+curl -N "http://localhost:9000/assess/stream?repoUrl=https://github.com/hmrc/pillar2-frontend&model=gemini-1.5-pro"
+```
+
 ### Available Templates
 
 - **`mdtp-pra`** (default): MDTP Platform Readiness Assessment

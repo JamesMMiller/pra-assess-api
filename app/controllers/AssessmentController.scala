@@ -16,7 +16,7 @@ class AssessmentController @Inject() (
 )(implicit ec: ExecutionContext)
     extends BaseController {
 
-  def assess(repoUrl: String, templateId: Option[String] = None) = Action {
+  def assess(repoUrl: String, templateId: Option[String] = None, model: Option[String] = None) = Action {
     val githubUrlPattern = "https://github.com/([^/]+)/([^/]+).*".r
 
     repoUrl match {
@@ -25,7 +25,9 @@ class AssessmentController @Inject() (
           .flatMap(templates.TemplateRegistry.get)
           .getOrElse(templates.TemplateRegistry.default)
 
-        val resultSource = assessmentOrchestrator.runAssessment(owner, repo, template)
+        val selectedModel = model.getOrElse("gemini-2.0-flash")
+
+        val resultSource = assessmentOrchestrator.runAssessment(owner, repo, template, selectedModel)
         val eventSource  = resultSource.map(result => Json.toJson(result))
 
         Ok.chunked(eventSource via EventSource.flow)
