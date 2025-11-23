@@ -1,6 +1,6 @@
 # PRA Assessment API
 
-A prototype API for automating Platform Readiness Assessments (PRA) using Gemini LLM.
+A prototype API for automating Platform Readiness Assessments (PRA) using Gemini LLM with type-safe assessment templates.
 
 ## Overview
 
@@ -8,10 +8,12 @@ This API allows users to stream PRA assessments for a given GitHub repository. I
 
 ## Features
 
-- **Streaming API**: Real-time assessment results via SSE.
-- **LLM Integration**: Powered by Google's Gemini 2.0 Flash model.
-- **Dynamic Discovery**: Intelligently selects relevant files for each check.
-- **GitHub Integration**: Fetches file trees and content directly from GitHub.
+- **Streaming API**: Real-time assessment results via SSE
+- **Template System**: Type-safe assessment templates with context resources
+- **LLM Integration**: Powered by Google's Gemini 2.0 Flash model
+- **Dynamic Discovery**: Intelligently selects relevant files for each check
+- **GitHub Integration**: Fetches file trees and content directly from GitHub
+- **Context-Aware**: Templates include reference resources (e.g., MDTP Handbook) for LLM
 
 ## Prerequisites
 
@@ -42,11 +44,27 @@ The API will be available at `http://localhost:9000`.
 
 ## Usage
 
-To assess a repository, use the `/assess/stream` endpoint:
+### Basic Assessment
+
+To assess a repository with the default template (MDTP PRA):
 
 ```bash
 curl -N "http://localhost:9000/assess/stream?repoUrl=https://github.com/hmrc/pillar2-frontend"
 ```
+
+### Template Selection
+
+To use a specific assessment template:
+
+```bash
+curl -N "http://localhost:9000/assess/stream?repoUrl=https://github.com/hmrc/pillar2-frontend&templateId=mdtp-pra"
+```
+
+### Available Templates
+
+- **`mdtp-pra`** (default): MDTP Platform Readiness Assessment
+  - Includes MDTP Handbook as context resource
+  - Assesses against HMRC architectural standards
 
 ### Response Format
 
@@ -54,25 +72,65 @@ The API streams JSON objects for each assessment item:
 
 ```json
 {
-  "item": "Check for sensitive data",
+  "checkId": "1.A",
+  "checkDescription": "Does your service implement any non-standard patterns?",
   "status": "PASS",
   "confidence": 0.9,
   "requiresReview": false,
-  "reason": "No secrets found in code.",
-  "evidence": []
+  "reason": "No non-standard patterns detected",
+  "evidence": [
+    {
+      "githubUrl": "https://github.com/hmrc/pillar2-frontend/blob/main/app/controllers/HomeController.scala#L15-L20"
+    }
+  ]
 }
 ```
 
+**Status Values**: `PASS`, `FAIL`, `WARNING`, `N/A`
+
 ## Architecture
 
-- **Framework**: Play Framework (Scala)
-- **Concurrency**: Pekko Streams for reactive streaming.
-- **LLM Client**: Custom WSClient implementation for Gemini API (v1beta).
+- **Framework**: Play Framework (Scala 3)
+- **Concurrency**: Pekko Streams for reactive streaming
+- **LLM Client**: Custom WSClient implementation for Gemini API (v1beta)
+- **Templates**: Type-safe template registry with context resources
 
 ## Testing
 
-Run the integration tests:
+Run all tests:
 
 ```bash
 sbt test
+```
+
+Run specific test suites:
+
+```bash
+sbt "testOnly models.*"
+sbt "testOnly templates.*"
+```
+
+**Test Coverage**: 40 tests including unit and integration tests
+
+## Adding New Templates
+
+To add a new assessment template, update `app/templates/TemplateRegistry.scala`:
+
+```scala
+val myTemplate = AssessmentTemplate(
+  id = "my-template",
+  name = "My Assessment Template",
+  description = "Description of what this template assesses",
+  contextResources = Seq(
+    ContextResource(
+      name = "Reference Guide",
+      url = "https://example.com/guide",
+      description = "Official standards and patterns"
+    )
+  ),
+  checks = Seq(
+    CheckItem("1.A", "First check description"),
+    CheckItem("1.B", "Second check description")
+  )
+)
 ```
