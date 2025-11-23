@@ -12,6 +12,15 @@ class TemplateRegistrySpec extends AnyWordSpec with Matchers {
       TemplateRegistry.mdtpPra.name should not be empty
       TemplateRegistry.mdtpPra.description should not be empty
       TemplateRegistry.mdtpPra.basePrompt should include("Platform Readiness Assessor")
+
+      // Verify we have a significant number of checks now
+      TemplateRegistry.mdtpPra.checks.length should be > 20
+
+      // Verify some specific categories exist
+      TemplateRegistry.mdtpPra.checks.exists(_.id.startsWith("1.")) shouldBe true  // Build
+      TemplateRegistry.mdtpPra.checks.exists(_.id.startsWith("2.")) shouldBe true  // Data
+      TemplateRegistry.mdtpPra.checks.exists(_.id.startsWith("4.")) shouldBe true  // Security
+      TemplateRegistry.mdtpPra.checks.exists(_.id.startsWith("13.")) shouldBe true // Testing
     }
 
     "have context resources in mdtpPra" in {
@@ -23,7 +32,7 @@ class TemplateRegistrySpec extends AnyWordSpec with Matchers {
 
     "have checks in mdtpPra" in {
       TemplateRegistry.mdtpPra.checks should not be empty
-      TemplateRegistry.mdtpPra.checks.length shouldBe 4
+      TemplateRegistry.mdtpPra.checks.length should be > 20
     }
 
     "have valid check IDs in mdtpPra" in {
@@ -53,7 +62,7 @@ class TemplateRegistrySpec extends AnyWordSpec with Matchers {
     "list all templates" in {
       val all = TemplateRegistry.listAll
       all should contain(TemplateRegistry.mdtpPra)
-      all.length shouldBe 1
+      all.length shouldBe 2
     }
   }
 }
