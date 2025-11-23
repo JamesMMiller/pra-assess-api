@@ -44,10 +44,23 @@ class AssessmentIntegrationSpec extends PlaySpec with GuiceOneAppPerSuite with S
 
       events.length must be > 0
 
-      // Check that we can parse at least one result
+      // Check that we can parse at least one result with new structure
       val firstResult = play.api.libs.json.Json.parse(events.head)
+      (firstResult \ "checkId").asOpt[String] mustBe defined
+      (firstResult \ "checkDescription").asOpt[String] mustBe defined
       (firstResult \ "status").asOpt[String] mustBe defined
       (firstResult \ "confidence").asOpt[Double] mustBe defined
+      (firstResult \ "requiresReview").asOpt[Boolean] mustBe defined
+      (firstResult \ "reason").asOpt[String] mustBe defined
+
+      // Verify evidence contains GitHub URLs
+      val evidence = (firstResult \ "evidence").asOpt[Seq[play.api.libs.json.JsValue]].getOrElse(Seq.empty)
+      if (evidence.nonEmpty) {
+        val firstEvidence = evidence.head
+        val githubUrl     = (firstEvidence \ "githubUrl").asOpt[String]
+        githubUrl mustBe defined
+        githubUrl.get must include("github.com")
+      }
 
       println(s"Stream finished for $repoUrl. Received ${events.length} events.")
       println(s"First event: ${events.head}")
