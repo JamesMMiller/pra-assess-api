@@ -30,7 +30,8 @@ scalaVersion := "3.3.3"
 
 libraryDependencies += guice
 libraryDependencies += ws
-libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "7.0.2" % Test
+libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "7.0.2"    % Test
+libraryDependencies += "org.scalatestplus"      %% "mockito-5-10"       % "3.2.18.0" % Test
 
 // Coverage settings
 
