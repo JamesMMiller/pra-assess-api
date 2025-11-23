@@ -34,7 +34,7 @@ class AssessmentOrchestrator @Inject() (
               })
               .map(_.toMap)
             // c. Assess
-            result <- geminiService.assessItem(owner, repo, sharedContext, checkItem, fileContents)
+            result <- geminiService.assessItem(owner, repo, sharedContext, template, checkItem, fileContents)
           } yield result
         }
       }

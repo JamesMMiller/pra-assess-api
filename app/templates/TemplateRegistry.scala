@@ -4,16 +4,21 @@ import models.{AssessmentTemplate, CheckItem, ContextResource}
 
 object TemplateRegistry {
 
-  val mdtpPra: AssessmentTemplate = AssessmentTemplate(
+  val mdtpPra = AssessmentTemplate(
     id = "mdtp-pra",
     name = "MDTP Platform Readiness Assessment",
-    description = "Assesses HMRC digital services against MDTP architectural standards and best practices",
+    description = "Checks for compliance with MDTP standards and best practices.",
+    basePrompt = """
+      |You are an expert Platform Readiness Assessor for the MDTP platform (Multichannel Digital Tax Platform).
+      |Your role is to review code against specific architectural standards and provide actionable feedback.
+      |You should be strict but helpful, citing evidence for your findings.
+      |Focus on security, maintainability, and adherence to HMRC patterns.
+      """.stripMargin.trim,
     contextResources = Seq(
       ContextResource(
         name = "MDTP Handbook",
         url = "https://docs.tax.service.gov.uk/mdtp-handbook/",
-        description =
-          "Official HMRC Multi-channel Digital Tax Platform handbook containing patterns, standards, and best practices for building digital services"
+        description = "Official documentation for MDTP architectural standards and patterns."
       )
     ),
     checks = Seq(

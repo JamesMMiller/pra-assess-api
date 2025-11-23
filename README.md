@@ -9,11 +9,19 @@ This API allows users to stream PRA assessments for a given GitHub repository. I
 ## Features
 
 - **Streaming API**: Real-time assessment results via SSE
-- **Template System**: Type-safe assessment templates with context resources
+- **Template System**: Type-safe assessment templates with context resources and customizable base prompts
 - **LLM Integration**: Powered by Google's Gemini 2.0 Flash model
-- **Dynamic Discovery**: Intelligently selects relevant files for each check
+- **Dynamic Discovery**: Intelligently selects relevant files for each check (Token Efficient)
 - **GitHub Integration**: Fetches file trees and content directly from GitHub
 - **Context-Aware**: Templates include reference resources (e.g., MDTP Handbook) for LLM
+
+## Token Efficiency Strategy
+
+This API is designed to be highly token-efficient, avoiding the need for expensive context caching (which requires >32k tokens):
+
+1.  **Dynamic Discovery**: Instead of sending the entire repository content, the API first asks the LLM to select only the files relevant to the specific check.
+2.  **Shared Context**: A concise summary of the project structure is generated once and reused across all checks.
+3.  **Base Prompts**: Assessor personas and instructions are defined in the system prompt, keeping user prompts focused.
 
 ## Prerequisites
 
@@ -121,6 +129,7 @@ val myTemplate = AssessmentTemplate(
   id = "my-template",
   name = "My Assessment Template",
   description = "Description of what this template assesses",
+  basePrompt = "You are an expert assessor for...",
   contextResources = Seq(
     ContextResource(
       name = "Reference Guide",
