@@ -13,18 +13,23 @@ class AssessmentOrchestrator @Inject() (
     geminiService: GeminiService
 )(implicit ec: ExecutionContext) {
 
-  def runAssessment(owner: String, repo: String, template: AssessmentTemplate): Source[AssessmentResult, NotUsed] = {
+  def runAssessment(
+      owner: String,
+      repo: String,
+      template: AssessmentTemplate,
+      model: String
+  ): Source[AssessmentResult, NotUsed] = {
     // 1. Fetch File Tree
     val fileTreeFuture = gitHubConnector.getFileTree(owner, repo)
 
     Source.future(fileTreeFuture).flatMapConcat { fileTree =>
       // 2. Generate Shared Context (with template context resources)
-      Source.future(geminiService.generateSharedContext(fileTree, template)).flatMapConcat { sharedContext =>
+      Source.future(geminiService.generateSharedContext(fileTree, template, model)).flatMapConcat { sharedContext =>
         // 3. Stream Check Items from template
         Source(template.checks).mapAsync(parallelism = 2) { checkItem =>
           for {
             // a. Select Files
-            relevantFiles <- geminiService.selectFiles(sharedContext, checkItem.description, fileTree)
+            relevantFiles <- geminiService.selectFiles(sharedContext, checkItem.description, fileTree, model)
             // b. Fetch Content
             fileContents <- Future
               .sequence(relevantFiles.map { path =>
@@ -34,7 +39,7 @@ class AssessmentOrchestrator @Inject() (
               })
               .map(_.toMap)
             // c. Assess
-            result <- geminiService.assessItem(owner, repo, sharedContext, template, checkItem, fileContents)
+            result <- geminiService.assessItem(owner, repo, sharedContext, template, checkItem, fileContents, model)
           } yield result
         }
       }

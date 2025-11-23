@@ -23,7 +23,11 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
   // 1. Summarizing the file tree (Shared Context) once.
   // 2. Using a Base Prompt in the system instruction.
   // 3. Selecting only relevant files for each check.
-  def generateSharedContext(fileTree: Seq[String], template: models.AssessmentTemplate): Future[String] = {
+  def generateSharedContext(
+      fileTree: Seq[String],
+      template: models.AssessmentTemplate,
+      model: String
+  ): Future[String] = {
     val contextResourcesText = if (template.contextResources.nonEmpty) {
       val resources = template.contextResources
         .map { resource =>
@@ -49,29 +53,32 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
       |(truncated if too long)
       """.stripMargin
 
-    callGemini(prompt, "You are a senior software architect.").map { response =>
+    callGemini(prompt, "You are a senior software architect.", model).map { response =>
       extractText(response)
     }
   }
 
-  def selectFiles(sharedContext: String, item: String, fileTree: Seq[String]): Future[Seq[String]] = {
+  def selectFiles(
+      sharedContext: String,
+      checkDescription: String,
+      fileTree: Seq[String],
+      model: String
+  ): Future[Seq[String]] = {
     val prompt = s"""
-      |Context: $sharedContext
-      |Checklist Item: $item
+      |Given this project context:
+      |$sharedContext
       |
-      |Identify up to 5 most relevant files from the list below to assess this item.
-      |Return ONLY a JSON array of strings. Example: ["build.sbt", "app/controllers/HomeController.scala"]
-      |
-      |Files:
+      |And this file tree:
       |${fileTree.take(500).mkString("\n")}
+      |
+      |Identify the top 3-5 files that are most relevant to checking: "$checkDescription"
+      |Return ONLY a JSON array of file paths. Example: ["app/controllers/HomeController.scala", "conf/application.conf"]
       """.stripMargin
 
-    callGemini(prompt, "You are a file selector helper. Return only JSON.", jsonMode = true).map { response =>
+    callGemini(prompt, "You are a code analyzer. Return only JSON.", model, jsonMode = true).map { response =>
       val content = extractText(response)
       try {
-        val json = Json.parse(content)
-        if (json.asOpt[Seq[String]].isDefined) json.as[Seq[String]]
-        else (json \ "files").asOpt[Seq[String]].getOrElse(Seq.empty)
+        Json.parse(content).as[Seq[String]]
       } catch {
         case _: Exception => Seq.empty
       }
@@ -84,7 +91,8 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
       sharedContext: String,
       template: models.AssessmentTemplate,
       checkItem: models.CheckItem,
-      fileContents: Map[String, String]
+      fileContents: Map[String, String],
+      model: String
   ): Future[AssessmentResult] = {
     val filesContext = fileContents
       .map { case (path, content) =>
@@ -93,27 +101,16 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
       .mkString("\n")
 
     val prompt = s"""
-      |Context: $sharedContext
-      |Checklist Item: ${checkItem.description}
+      |Assess the following files against this check: "${checkItem.description}"
       |
-      |Assess if the code passes the check.
-      |Return JSON matching this schema:
-      |{
-      |  "status": "PASS" | "FAIL" | "WARNING" | "N/A",
-      |  "confidence": 0.0-1.0,
-      |  "requiresReview": boolean,
-      |  "reason": "string",
-      |  "evidence": [{ "filePath": "string", "lineStart": int, "lineEnd": int }]
-      |}
+      |Shared Context:
+      |$sharedContext
       |
-      |For evidence, provide the file path and line numbers where relevant code is found.
-      |Do NOT include code snippets - only file paths and line numbers.
-      |
-      |Code:
+      |Files:
       |$filesContext
       """.stripMargin
 
-    callGemini(prompt, template.basePrompt, jsonMode = true).map { response =>
+    callGemini(prompt, template.basePrompt, model, jsonMode = true).map { response =>
       val content = extractText(response)
       try {
         val json           = Json.parse(content)
@@ -163,14 +160,25 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
     }
   }
 
-  private def callGemini(userPrompt: String, systemPrompt: String, jsonMode: Boolean = false): Future[JsValue] = {
+  private def callGemini(
+      prompt: String,
+      systemInstruction: String,
+      model: String = this.model,
+      jsonMode: Boolean = false
+  ): Future[JsValue] = {
     val url = s"$baseUrl/$model:generateContent?key=$apiKey"
 
     val payload = Json.obj(
+      "systemInstruction" -> Json.obj(
+        "parts" -> Json.arr(
+          Json.obj("text" -> systemInstruction)
+        )
+      ),
       "contents" -> Json.arr(
         Json.obj(
+          "role" -> "user",
           "parts" -> Json.arr(
-            Json.obj("text" -> s"$systemPrompt\n\n$userPrompt")
+            Json.obj("text" -> prompt)
           )
         )
       ),
