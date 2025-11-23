@@ -74,6 +74,7 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
       owner: String,
       repo: String,
       sharedContext: String,
+      template: models.AssessmentTemplate,
       checkItem: models.CheckItem,
       fileContents: Map[String, String]
   ): Future[AssessmentResult] = {
@@ -104,7 +105,7 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
       |$filesContext
       """.stripMargin
 
-    callGemini(prompt, "You are a PRA Assessor. Return only JSON.", jsonMode = true).map { response =>
+    callGemini(prompt, template.basePrompt, jsonMode = true).map { response =>
       val content = extractText(response)
       try {
         val json           = Json.parse(content)

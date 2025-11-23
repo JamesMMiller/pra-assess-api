@@ -11,6 +11,7 @@ class TemplateRegistrySpec extends AnyWordSpec with Matchers {
       TemplateRegistry.mdtpPra.id shouldBe "mdtp-pra"
       TemplateRegistry.mdtpPra.name should not be empty
       TemplateRegistry.mdtpPra.description should not be empty
+      TemplateRegistry.mdtpPra.basePrompt should include("Platform Readiness Assessor")
     }
 
     "have context resources in mdtpPra" in {

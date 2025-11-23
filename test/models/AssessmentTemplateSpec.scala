@@ -34,6 +34,7 @@ class AssessmentTemplateSpec extends AnyWordSpec with Matchers {
         id = "test-template",
         name = "Test Template",
         description = "Test description",
+        basePrompt = "You are a test assessor.",
         contextResources = Seq(ContextResource("Resource", "https://example.com", "Desc")),
         checks = Seq(CheckItem("1.A", "Test check"))
       )
@@ -43,6 +44,7 @@ class AssessmentTemplateSpec extends AnyWordSpec with Matchers {
       (json \ "id").as[String] shouldBe "test-template"
       (json \ "name").as[String] shouldBe "Test Template"
       (json \ "description").as[String] shouldBe "Test description"
+      (json \ "basePrompt").as[String] shouldBe "You are a test assessor."
       (json \ "contextResources").as[Seq[ContextResource]].length shouldBe 1
       (json \ "checks").as[Seq[CheckItem]].length shouldBe 1
     }
@@ -52,6 +54,7 @@ class AssessmentTemplateSpec extends AnyWordSpec with Matchers {
         "id": "test",
         "name": "Test",
         "description": "Desc",
+        "basePrompt": "Prompt",
         "contextResources": [{"name":"R","url":"https://r.com","description":"D"}],
         "checks": [{"id":"1.A","description":"Check"}]
       }""")
@@ -61,6 +64,7 @@ class AssessmentTemplateSpec extends AnyWordSpec with Matchers {
       template.id shouldBe "test"
       template.name shouldBe "Test"
       template.description shouldBe "Desc"
+      template.basePrompt shouldBe "Prompt"
       template.contextResources.length shouldBe 1
       template.checks.length shouldBe 1
     }

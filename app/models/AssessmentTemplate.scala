@@ -16,6 +16,7 @@ case class AssessmentTemplate(
     id: String,
     name: String,
     description: String,
+    basePrompt: String,
     contextResources: Seq[ContextResource],
     checks: Seq[CheckItem]
 )
