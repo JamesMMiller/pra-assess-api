@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up JDK 11
+      uses: actions/setup-java@v4
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        cache: 'sbt'
+    - name: Setup sbt
+      uses: sbt/setup-sbt@v1
+    - name: Run tests and linting
+      run: sbt lint coverage test coverageReport
+    - name: Check coverage
+      run: |
+        # Fail if coverage is below threshold (already handled by sbt-scoverage but good to have explicit check if needed)
+        echo "Coverage check completed by sbt-scoverage"

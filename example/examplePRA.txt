@@ -1,0 +1,148 @@
+Section CriteriaTeam reviewAssessor reviewComments/evidence from the team(include links where relevant)  Result  PASS WARNING FAIL/ N/A IN PROGRESS Comments from assessor
+
+1. Build & Resilience
+A 
+- Does your service implement any non-standard patterns, or contradict any of the MDTP Opinions?
+B 
+- Your service should not be breaking any Bobby Rules.You can check this with the Service Catalogue, for example: https://catalogue.tax.service.gov.uk/repositories/identity
+-verification
+-frontendProvide Catalogue link(s) for your service(s): 
+C 
+- Your service should not be using any deprecated HMRC Libraries.
+D 
+- Are you using HTTP Verbs in your outbound calls?We use http
+-verbs over play.api.libs.ws.WSClient to audit platform events. You can see examples of how to implement http
+-verbs here.
+E 
+- Are the Service(s) Readme document(s) are up to date and fit for purpose?
+F  
+- Appropriate timeouts should be set on all I/O, and this is proven through tests. Check the documentation on MDTP Retries and TimeoutsIf a downstream system starts to consistently fail your services should degrade gracefully, this should be proven with tests.You should also confirm HoD API usage fits within the Scrubbing Centre rate limits.
+
+2. Data PersistenceA  
+- Are you using Mongo for JSON data persistence?B 
+- Are you resilient to a recycle of Mongo?C 
+- Ensure your public Mongo has a TTL  <= 7 days.D 
+- Your service should use Field Level encryption where necessary.Your Risk Assessor should inform you which fields should be encrypted.E 
+- Ensure your Protected Mongo maintains a TTL <= 30 daysAt the time of writing this limit is being reviewed with the intention of allowing it to be longer. If your service needs to exceed 30 days you should ask your Risk Assessor.F 
+- Have you performance tested your service with production like data volumes in Mongo, and have you applied indexes where necessary?
+G 
+- Are you using Object Store for Binary data persistence?H 
+- Have you correctly set the retention period in the upload bucket?
+
+3. Common Service Usage
+A 
+- Have you checked the integration with any dependent services in QA and that you are not overloading them?
+B 
+- Have we notified our dependent services (both on and off Platform) as to expected load from our service?Some examples of dependent services that your team may wish to have a conversation with:SCPHoDs (confirmed usage may need a CR or RFC)AuthEmailEACDThe rule of thumb here is that your service going into production and putting load (however big) onto your dependencies should not be a surprise to them.
+
+4. Security
+A 
+- Frontend AuthenticationWe authenticate users via  SI  Services when necessary
+B 
+- Public Microservices should be authenticated and authorised by default.
+C 
+- Protected Microservices should be authenticated and authorised by default.Internal Auth is an option for service-to-service auth.
+
+5. Admin ServicesFor Admin Services, the following criteria must be checked.
+A 
+- There is no public route to the service in MDTP Frontend Routes.
+B 
+- VPN or Stride access only 
+- via the route for admin.tax.service.gov.uk
+C 
+- Access to this admin service must be secured with Internal or Stride Auth.
+D 
+- Access to the Production Admin Service Frontend must be specified in conjunction with your Risk Assessor.
+
+6. Caching 
+- We do not cache by default.We only implement caching when proven to be necessary.
+
+7. Performance
+A 
+- Does the service have adequate Performance expectations from business stakeholders? Performance expectations for a service may come from different sources (Digital Service Manager, line of business, data that the service team have access to etc) 
+- typically, the Product Owner is responsible for defining performance expectations appropriately for a service.Link to Confluence
+B 
+- Has the team run adequate Performance tests against the service?Evidence that the tests are being run regularily is expected.We require performance tests to be run on Staging before any release that could degrade the Services Performance as per the Performance Testing StrategyLink to the perf tests
+
+8. Logging 
+A 
+- Data protectionWe do not log any sensitive citizen or company information, or Personally Identifiable Information e.g. names, email addresses
+B 
+- Logging levels are correct for each environment.Production should be set to WARN.We log according to the MDTP platform logging best practices          
+C 
+- Exception loggingWe log exceptions according to the MDTP platform logging best practices
+D 
+- Exception contextWe provide sufficient context in an exception to explain the error. This should make sense to anyone troubleshooting the service. Not just you!
+E 
+- Scheduled tasks should include clear logging.
+
+9. Error Handling
+A 
+- We handle HTTP Verbs returns correctly.With the user journey in mind; expect errors from downstream systems and handle them in conjuction with HTTP Verbs behaviour. We encourage integration testing with Wiremock (or equivalent) to check all unexpected senarios.
+
+10. Configuration
+A 
+- Production configuration was sourced from StagingWe ensure our production configuration is derived from our tested staging instance and not from other servicesConfig explorer link(s): 
+B 
+- Does the service have appropriate configuration?The number of slots/instances in Production should equal those in Staging.
+
+11. Auditing(mandatory)  
+A 
+- Auditing explicit eventsWe explicitly audit events in accordance to  HMRC's requirements  and the Auditing Best Practice Guide
+B 
+- Auditing implicit eventsWe enable the implicit auditing of events in configuration. We check this is enabled in Production and QA.
+C 
+- Your audit events MUST be defined in and accessible from  CIP Assessments  and have been approved by the CIP Team.CIP assessment link: 
+
+12. Monitoring & Operations
+A 
+- Does the service have Kibana dashboards configured?Kibana dashboards link(s): 
+B 
+- Does the service have Grafana dashboards configured?Grafana dashboards link(s): 
+C 
+- Does the service have Pager Duty setup for the team?
+D 
+- Is the service's alert configuration configured to raise PagerDuty incidents against the owning team's account? 
+E 
+- Does the service have the following alerts configured?Container Kill Alerts5xx AlertsApplication Exception AlertsAny other alerts (optional)These are all configured on a per
+-service basis in the alert
+-config repository.Alert config link(s): 
+F 
+- Is Pager Duty configured to send alarms to a Slack Channel monitored by the team?Slack Channel link.
+G 
+- Has the Service Runbook been aproved by the platform team?Runbook link: Approval ticket link:
+
+13. Testing
+A 
+- Does the service have Unit Tests?
+B 
+- Does the service have Integration Tests?We like our connectors to be tested with Wiremock (or equivalent) and expect happy and unhappy paths to be exercised.
+C 
+- Does the service have UI Journey Tests?
+D 
+- Do 13 A, B and C follow the MDTP Testing Best Practice and the Test Pyramid?We prefer 'Shift Left to Fail Fast' and 'Enable Quick Feedback' by having more Unit than Integration, and more Integrations than UI Journey tests.
+D 
+- Does the service have Security Tests?
+E 
+- Does the service have Accessibility Tests?
+F 
+- Does the service have Compatablitiy / Device Testing?
+
+14.  Accessibility 
+- meeting legal requirements 
+-  Public Sector Body Accessibility Regulations (PSBAR) 2018To comply with the Public Sector Body Accessibility Regulations (PSBAR) 2018  your service (this includes websites and mobile applications) must:meet Web Content Accessibility Guidelines (WCAG) 2.2 to level AApublish an accessibility statement.Private betaNo accessibility statement needed. You must book a full accessibility audit at least four weeks before your public beta assessment. The outcomes of your audit are needed for the assessment. A
+- Have you booked your full accessibility audit and public beta assessment? Public beta Your accessibility statement must be published before your service goes into public beta. The content for the statement is taken from your accessibility audit report, which should be available in the footer links of your service.
+
+15. Virus checking uploaded documentsA 
+- Will your service upload files from any source (Public OGD, from the HMRC estate) to MDTP?If you are uploading files you should have incorporated the Upscan service into your data flow.B 
+- Have you tested the Upscan functionality for your service?
+
+16. Integrating with tracking consentDoes your frontend service include the tracking consent link?
+
+17. Service moving into a Live Service teamWill your service be transferred to a live service team? Are you aware of the Live Service Handover checklist? Please review Handover Checklist – moving a service into Live Services
+
+18. Other CommentsAre there any other comments?
+
+We collaborate on shared concerns
+
+Overall outcome:
