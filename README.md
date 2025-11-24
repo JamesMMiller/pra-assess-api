@@ -89,7 +89,23 @@ curl -N "http://localhost:9000/assess/stream?repoUrl=https://github.com/hmrc/pil
 - **`test`**: Minimal template for testing purposes.ource
   - Assesses against HMRC architectural standards
 
-### Response Format
+### API Endpoints
+
+#### 1. Streaming Assessment (SSE)
+`GET /assess/stream?repoUrl=<github_url>&templateId=<template_id>&model=<model>`
+
+- Returns a stream of Server-Sent Events (SSE).
+- Best for real-time UI feedback.
+- **Note**: May hit API rate limits on free tiers due to parallel execution.
+
+#### 2. Batch Assessment (Synchronous)
+`GET /assess/batch?repoUrl=<github_url>&templateId=<template_id>&model=<model>`
+
+- Returns a single JSON array containing all results.
+- Groups checks by category to minimize API calls (approx. 50% reduction).
+- **Recommended** for CI/CD pipelines or when facing rate limits.
+
+### Response Format (JSON)
 
 The API streams JSON objects for each assessment item:
 
