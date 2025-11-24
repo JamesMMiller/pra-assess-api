@@ -12,7 +12,7 @@ import models.{AssessmentResult, Evidence}
 class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec: ExecutionContext) {
 
   private val apiKey  = config.getOptional[String]("pra.assessment.gemini.apiKey").getOrElse("MISSING_KEY")
-  private val model   = "gemini-2.0-flash"
+  private val model   = "gemini-2.5-flash"
   private val baseUrl = "https://generativelanguage.googleapis.com/v1beta/models"
 
   // Note on Caching:
@@ -208,6 +208,40 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
     }
   }
 
+  def generateSearchTerms(
+      sharedContext: String,
+      categoryDescription: String,
+      checks: Seq[models.CheckItem],
+      model: String
+  ): Future[Seq[String]] = {
+    val checksJson = checks.map(c => s"${c.id}: ${c.description}").mkString("\n")
+
+    val prompt = s"""
+      |Given this project context:
+      |$sharedContext
+      |
+      |And these checks to assess:
+      |$checksJson
+      |
+      |What search terms would help find relevant files in the codebase?
+      |Consider:
+      |- Technology names (e.g., "Upscan", "Mongo", "Auth")
+      |- Class/interface names (e.g., "AuthConnector", "Repository")
+      |- Configuration keys (e.g., "TTL", "timeout")
+      |
+      |Return ONLY a JSON array of 3-5 search terms. Example: ["Upscan", "AuthConnector", "Mongo"]
+      """.stripMargin
+
+    callGemini(prompt, "You are a code search expert. Return only JSON.", model, jsonMode = true).map { response =>
+      val content = extractText(response)
+      try {
+        Json.parse(content).as[Seq[String]]
+      } catch {
+        case _: Exception => Seq.empty
+      }
+    }
+  }
+
   def assessBatch(
       owner: String,
       repo: String,
@@ -326,17 +360,36 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
           )
         )
       ),
-      "generationConfig" -> (if (jsonMode) Json.obj("responseMimeType" -> "application/json") else Json.obj())
+      "generationConfig" -> {
+        val baseConfig = if (jsonMode) {
+          Json.obj("responseMimeType" -> "application/json")
+        } else {
+          Json.obj()
+        }
+        // Enable dynamic thinking for Gemini 2.5+ models
+        // thinkingConfig.thinkingBudget: -1 = dynamic (model adjusts based on complexity)
+        baseConfig ++ Json.obj(
+          "thinkingConfig" -> Json.obj(
+            "thinkingBudget" -> -1
+          )
+        )
+      }
     )
 
     ws.url(url)
       .withHttpHeaders("Content-Type" -> "application/json")
       .post(payload)
       .map { response =>
-        if (response.status == 200) {
-          response.json
-        } else {
-          throw new RuntimeException(s"LLM call failed: ${response.status} ${response.body}")
+        response.status match {
+          case 200 =>
+            response.json
+          case 429 =>
+            throw models.GeminiRateLimitException(
+              s"Gemini Rate Limit Exceeded: ${response.body}",
+              retryAfter = None // Could parse from headers if available
+            )
+          case _ =>
+            throw new RuntimeException(s"LLM call failed: ${response.status} ${response.body}")
         }
       }
   }
