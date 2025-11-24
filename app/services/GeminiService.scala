@@ -360,7 +360,16 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
           )
         )
       ),
-      "generationConfig" -> (if (jsonMode) Json.obj("responseMimeType" -> "application/json") else Json.obj())
+      "generationConfig" -> {
+        val baseConfig = if (jsonMode) {
+          Json.obj("responseMimeType" -> "application/json")
+        } else {
+          Json.obj()
+        }
+        // Enable dynamic thinking for Gemini 2.5+ models
+        // thinkingBudget: -1 = dynamic (model adjusts based on complexity)
+        baseConfig ++ Json.obj("thinkingBudget" -> -1)
+      }
     )
 
     ws.url(url)
