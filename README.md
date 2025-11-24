@@ -4,24 +4,85 @@ A prototype API for automating Platform Readiness Assessments (PRA) using Gemini
 
 ## Overview
 
-This API allows users to stream PRA assessments for a given GitHub repository. It uses Server-Sent Events (SSE) to deliver real-time feedback as the LLM assesses the codebase against a checklist.
+This API automates PRA assessments for GitHub repositories using Google's Gemini LLM. It intelligently analyzes codebases against customizable assessment templates, providing detailed results with evidence and confidence scores.
 
 ## Features
 
-- **Streaming API**: Real-time assessment results via SSE
+- **Batch Assessment API**: Complete assessment results in a single JSON response
 - **Template System**: Type-safe assessment templates with context resources and customizable base prompts
-- **LLM Integration**: Powered by Google's Gemini 2.0 Flash model
-- **Dynamic Discovery**: Intelligently selects relevant files for each check (Token Efficient)
+- **Thinking Mode**: Uses Gemini 2.5 Flash with dynamic thinking for improved reasoning
+- **Dynamic Search**: LLM generates search terms to find relevant files
+- **Smart File Selection**: Intelligently selects relevant files for each check (Token Efficient)
 - **GitHub Integration**: Fetches file trees and content directly from GitHub
 - **Context-Aware**: Templates include reference resources (e.g., MDTP Handbook) for LLM
 
+## How It Works
+
+The assessment process follows these steps:
+
+```mermaid
+graph TD
+    A[Start: GitHub Repo URL] --> B[Fetch File Tree]
+    B --> C[Generate Shared Context]
+    C --> D{For Each Category}
+    D --> E[Generate Search Terms]
+    E --> F[Search GitHub Code]
+    F --> G[Select Relevant Files]
+    G --> H[Fetch File Contents]
+    H --> I[Batch Assess Category]
+    I --> D
+    D --> J[Return All Results]
+```
+
+### Step-by-Step Process
+
+1. **Fetch File Tree**
+   - Retrieve complete file structure from GitHub API
+   - Used to understand project organization
+
+2. **Generate Shared Context**
+   - LLM analyzes file tree and template resources
+   - Creates concise summary of project structure
+   - Reused across all checks for efficiency
+
+3. **For Each Category** (e.g., Security, Data Persistence):
+
+   a. **Generate Search Terms** (Dynamic)
+      - LLM analyzes check descriptions
+      - Generates 3-5 relevant search terms
+      - Examples: "AuthConnector", "Mongo", "Upscan"
+
+   b. **Search GitHub Code**
+      - Use GitHub Search API with generated terms
+      - Find files likely to contain relevant code
+      - Gracefully handles rate limits
+
+   c. **Select Relevant Files**
+      - LLM picks top 5-10 files for the category
+      - Considers both file tree and search results
+      - Prioritizes files found via search
+
+   d. **Fetch File Contents**
+      - Retrieve actual code from selected files
+      - Handle errors gracefully
+
+   e. **Batch Assess Category**
+      - LLM assesses all checks in category at once
+      - Uses thinking mode for better reasoning
+      - Returns structured results with evidence
+
+4. **Return All Results**
+   - Combine results from all categories
+   - Return as JSON array
+
 ## Token Efficiency Strategy
 
-This API is designed to be highly token-efficient, avoiding the need for expensive context caching (which requires >32k tokens):
+This API is designed to be highly token-efficient:
 
-1.  **Dynamic Discovery**: Instead of sending the entire repository content, the API first asks the LLM to select only the files relevant to the specific check.
-2.  **Shared Context**: A concise summary of the project structure is generated once and reused across all checks.
-3.  **Base Prompts**: Assessor personas and instructions are defined in the system prompt, keeping user prompts focused.
+1.  **Dynamic Discovery**: Instead of sending the entire repository, the API selects only relevant files
+2.  **Shared Context**: Project summary generated once and reused
+3.  **Batch Processing**: Multiple checks assessed together
+4.  **Smart Search**: GitHub Search API narrows down relevant files before LLM selection
 
 ## Prerequisites
 
@@ -52,12 +113,12 @@ The API will be available at `http://localhost:9000`.
 
 ## Usage
 
-### Basic Assessment
+### Batch Assessment
 
 To assess a repository with the default template (MDTP PRA):
 
 ```bash
-curl -N "http://localhost:9000/assess/stream?repoUrl=https://github.com/hmrc/pillar2-frontend"
+curl "http://localhost:9000/assess/batch?repoUrl=https://github.com/hmrc/pillar2-frontend"
 ```
 
 ### Template Selection
@@ -65,23 +126,15 @@ curl -N "http://localhost:9000/assess/stream?repoUrl=https://github.com/hmrc/pil
 To use a specific assessment template:
 
 ```bash
-curl -N "http://localhost:9000/assess/stream?repoUrl=https://github.com/hmrc/pillar2-frontend&templateId=mdtp-pra"
+curl "http://localhost:9000/assess/batch?repoUrl=https://github.com/hmrc/pillar2-frontend&templateId=mdtp-pra"
 ```
 
 ### Model Selection
 
-To use a specific Gemini model (default is `gemini-2.0-flash`):
+To use a specific Gemini model (default is `gemini-2.5-flash`):
 
 ```bash
-curl -N "http://localhost:9000/assess/stream?repoUrl=https://github.com/hmrc/pillar2-frontend&model=gemini-1.5-pro"
-```
-
-### Batch Assessment
-
-To run a batch assessment (recommended for CI/CD to avoid rate limits):
-
-```bash
-curl "http://localhost:9000/assess/batch?repoUrl=https://github.com/hmrc/pillar2-frontend"
+curl "http://localhost:9000/assess/batch?repoUrl=https://github.com/hmrc/pillar2-frontend&model=gemini-2.5-pro"
 ```
 
 ### Available Templates
@@ -94,70 +147,76 @@ curl "http://localhost:9000/assess/batch?repoUrl=https://github.com/hmrc/pillar2
         - Admin Services
         - Logging & Auditing
         - Testing & Accessibility
-- **`test`**: Minimal template for testing purposes.ource
-  - Assesses against HMRC architectural standards
+- **`test`**: Minimal template for testing purposes
 
 ### API Endpoints
 
-#### 1. Streaming Assessment (SSE)
-`GET /assess/stream?repoUrl=<github_url>&templateId=<template_id>&model=<model>`
+#### `GET /assess/batch`
 
-- Returns a stream of Server-Sent Events (SSE).
-- Best for real-time UI feedback.
-- **Note**: May hit API rate limits on free tiers due to parallel execution.
+Returns a complete assessment as a JSON array.
 
-#### 2. Batch Assessment (Synchronous)
-`GET /assess/batch?repoUrl=<github_url>&templateId=<template_id>&model=<model>`
+**Query Parameters:**
+- `repoUrl` (required): GitHub repository URL
+- `templateId` (optional): Assessment template ID (default: `mdtp-pra`)
+- `model` (optional): Gemini model name (default: `gemini-2.5-flash`)
 
-- Returns a single JSON array containing all results.
-- Groups checks by category to minimize API calls (approx. 50% reduction).
-- **Recommended** for CI/CD pipelines or when facing rate limits.
-
-### Response Format (JSON)
-
-The API streams JSON objects for each assessment item:
-
+**Response:**
 ```json
-{
-  "checkId": "1.A",
-  "checkDescription": "Does your service implement any non-standard patterns?",
-  "status": "PASS",
-  "confidence": 0.9,
-  "requiresReview": false,
-  "reason": "No non-standard patterns detected",
-  "evidence": [
-    {
-      "githubUrl": "https://github.com/hmrc/pillar2-frontend/blob/main/app/controllers/HomeController.scala#L15-L20"
-    }
-  ]
-}
+[
+  {
+    "checkId": "1.A",
+    "checkDescription": "Does the service implement any non-standard patterns?",
+    "status": "PASS",
+    "confidence": 0.9,
+    "requiresReview": false,
+    "reason": "Service follows standard MDTP patterns...",
+    "evidence": [
+      {
+        "githubUrl": "https://github.com/hmrc/repo/blob/main/app/config/AppConfig.scala#L10-L20"
+      }
+    ]
+  }
+]
 ```
 
 **Status Values**: `PASS`, `FAIL`, `WARNING`, `N/A`
 
-## Architecture
-
-- **Framework**: Play Framework (Scala 3)
-- **Concurrency**: Pekko Streams for reactive streaming
-- **LLM Client**: Custom WSClient implementation for Gemini API (v1beta)
-- **Templates**: Type-safe template registry with context resources
+**Error Responses:**
+- `400 Bad Request`: Invalid GitHub URL
+- `429 Too Many Requests`: Rate limit exceeded (includes retry delay)
+- `500 Internal Server Error`: Assessment failed
 
 ## Testing
 
 Run all tests:
-
 ```bash
 sbt test
 ```
 
-Run specific test suites:
-
+Run integration tests (requires Gemini API key):
 ```bash
-sbt "testOnly models.*"
-sbt "testOnly templates.*"
+sbt "testOnly integration.*"
 ```
 
-**Test Coverage**: 40 tests including unit and integration tests
+## Architecture
+
+### Key Components
+
+- **`AssessmentController`**: HTTP endpoint handling
+- **`AssessmentOrchestrator`**: Coordinates the assessment workflow
+- **`GeminiService`**: LLM integration (context generation, file selection, assessment, search term generation)
+- **`GitHubConnector`**: GitHub API integration (file tree, content, code search)
+- **`TemplateRegistry`**: Assessment template definitions
+
+### Assessment Templates
+
+Templates are defined in `app/templates/TemplateRegistry.scala` and include:
+- **ID**: Unique identifier
+- **Name**: Human-readable name
+- **Description**: Template purpose
+- **Base Prompt**: LLM instructions and persona
+- **Context Resources**: Reference materials (e.g., MDTP Handbook)
+- **Checks**: List of assessment items
 
 ## Adding New Templates
 
@@ -182,3 +241,7 @@ val myTemplate = AssessmentTemplate(
   )
 )
 ```
+
+## License
+
+This code is open source software licensed under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html).
