@@ -367,10 +367,16 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
       .withHttpHeaders("Content-Type" -> "application/json")
       .post(payload)
       .map { response =>
-        if (response.status == 200) {
-          response.json
-        } else {
-          throw new RuntimeException(s"LLM call failed: ${response.status} ${response.body}")
+        response.status match {
+          case 200 =>
+            response.json
+          case 429 =>
+            throw models.GeminiRateLimitException(
+              s"Gemini Rate Limit Exceeded: ${response.body}",
+              retryAfter = None // Could parse from headers if available
+            )
+          case _ =>
+            throw new RuntimeException(s"LLM call failed: ${response.status} ${response.body}")
         }
       }
   }

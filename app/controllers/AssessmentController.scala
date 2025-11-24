@@ -47,11 +47,25 @@ class AssessmentController @Inject() (
           .flatMap(templates.TemplateRegistry.get)
           .getOrElse(templates.TemplateRegistry.default)
 
-        val selectedModel = model.getOrElse("gemini-2.0-flash-thinking-exp")
+        val selectedModel = model.getOrElse("gemini-2.5-pro-exp")
 
-        assessmentOrchestrator.runBatchAssessment(owner, repo, template, selectedModel).map { results =>
-          Ok(Json.toJson(results))
-        }
+        assessmentOrchestrator
+          .runBatchAssessment(owner, repo, template, selectedModel)
+          .map { results =>
+            Ok(Json.toJson(results))
+          }
+          .recover {
+            case e: models.GeminiRateLimitException =>
+              TooManyRequests(
+                Json.obj(
+                  "error"      -> "Rate limit exceeded",
+                  "message"    -> e.getMessage,
+                  "retryAfter" -> e.retryAfter
+                )
+              )
+            case e: Exception =>
+              InternalServerError(Json.obj("error" -> e.getMessage))
+          }
 
       case _ =>
         Future.successful(BadRequest(Json.obj("error" -> "Invalid GitHub URL format")))
