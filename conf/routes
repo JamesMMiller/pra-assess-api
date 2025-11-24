@@ -6,6 +6,7 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index()
 GET     /assess/stream              controllers.AssessmentController.assess(repoUrl: String, templateId: Option[String] ?= None, model: Option[String] ?= None)
+GET     /assess/batch               controllers.AssessmentController.assessBatch(repoUrl: String, templateId: Option[String] ?= None, model: Option[String] ?= None)
 
 GET     /hello-world                controllers.HomeController.helloWorld()
 

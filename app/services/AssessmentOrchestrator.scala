@@ -45,4 +45,47 @@ class AssessmentOrchestrator @Inject() (
       }
     }
   }
+
+  def runBatchAssessment(
+      owner: String,
+      repo: String,
+      template: AssessmentTemplate,
+      model: String
+  ): Future[Seq[AssessmentResult]] = {
+    // 1. Fetch File Tree
+    gitHubConnector.getFileTree(owner, repo).flatMap { fileTree =>
+      // 2. Generate Shared Context
+      geminiService.generateSharedContext(fileTree, template, model).flatMap { sharedContext =>
+        // 3. Group Checks by Category (Prefix)
+        // e.g. "1.A", "1.B" -> "1"
+        val categories = template.checks.groupBy(c => c.id.split("\\.").headOption.getOrElse("Other"))
+
+        // 4. Process Categories
+        Future
+          .sequence(categories.map { case (categoryId, checks) =>
+            for {
+              // a. Select Files for Category
+              // We use a generic description for the category based on the first check or just the ID
+              relevantFiles <- geminiService.selectFilesForCategory(
+                sharedContext,
+                s"Checks for category $categoryId",
+                fileTree,
+                model
+              )
+              // b. Fetch Content
+              fileContents <- Future
+                .sequence(relevantFiles.map { path =>
+                  gitHubConnector.getFileContent(owner, repo, path).map(content => path -> content).recover { case _ =>
+                    path -> "Error fetching file"
+                  }
+                })
+                .map(_.toMap)
+              // c. Assess Batch
+              results <- geminiService.assessBatch(owner, repo, sharedContext, template, checks, fileContents, model)
+            } yield results
+          })
+          .map(_.flatten.toSeq)
+      }
+    }
+  }
 }

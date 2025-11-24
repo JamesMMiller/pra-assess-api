@@ -161,6 +161,129 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
     }
   }
 
+  def selectFilesForCategory(
+      sharedContext: String,
+      categoryDescription: String,
+      fileTree: Seq[String],
+      model: String
+  ): Future[Seq[String]] = {
+    val prompt = s"""
+      |Given this project context:
+      |$sharedContext
+      |
+      |And this file tree:
+      |${fileTree.take(500).mkString("\n")}
+      |
+      |Identify the top 5-10 files that are most relevant to checking the category: "$categoryDescription"
+      |Return ONLY a JSON array of file paths. Example: ["app/controllers/HomeController.scala", "conf/application.conf"]
+      """.stripMargin
+
+    callGemini(prompt, "You are a code analyzer. Return only JSON.", model, jsonMode = true).map { response =>
+      val content = extractText(response)
+      try {
+        Json.parse(content).as[Seq[String]]
+      } catch {
+        case _: Exception => Seq.empty
+      }
+    }
+  }
+
+  def assessBatch(
+      owner: String,
+      repo: String,
+      sharedContext: String,
+      template: models.AssessmentTemplate,
+      checks: Seq[models.CheckItem],
+      fileContents: Map[String, String],
+      model: String
+  ): Future[Seq[AssessmentResult]] = {
+    val filesContext = fileContents
+      .map { case (path, content) =>
+        s"--- $path ---\n$content\n"
+      }
+      .mkString("\n")
+
+    val checksJson = Json.toJson(checks.map(c => Json.obj("id" -> c.id, "description" -> c.description))).toString()
+
+    val prompt = s"""
+      |Assess the following files against these checks:
+      |$checksJson
+      |
+      |Shared Context:
+      |$sharedContext
+      |
+      |Files:
+      |$filesContext
+      |
+      |Return a JSON array of assessment results, one for each check.
+      |Each result must follow this structure:
+      |{
+      |  "checkId": "id",
+      |  "status": "PASS|FAIL|WARNING|N/A",
+      |  "confidence": 0.0-1.0,
+      |  "requiresReview": true|false,
+      |  "reason": "explanation",
+      |  "evidence": [{"filePath": "...", "lineStart": 1, "lineEnd": 10}]
+      |}
+      """.stripMargin
+
+    callGemini(prompt, template.basePrompt, model, jsonMode = true).map { response =>
+      val content = extractText(response)
+      try {
+        val jsonArray = Json.parse(content).as[Seq[JsValue]]
+        jsonArray.map { json =>
+          val checkId   = (json \ "checkId").as[String]
+          val checkItem = checks.find(_.id == checkId).getOrElse(models.CheckItem(checkId, "Unknown check"))
+
+          val statusStr  = (json \ "status").asOpt[String].orElse((json \ "result").asOpt[String]).getOrElse("WARNING")
+          val status     = models.AssessmentStatus.fromString(statusStr)
+          val confidence = (json \ "confidence").as[Double]
+          val requiresReview = (json \ "requiresReview").as[Boolean]
+          val reason         = (json \ "reason").as[String]
+
+          val evidence = (json \ "evidence").as[Seq[JsValue]].map { ev =>
+            val filePath  = (ev \ "filePath").as[String]
+            val lineStart = (ev \ "lineStart").asOpt[Int]
+            val lineEnd   = (ev \ "lineEnd").asOpt[Int]
+
+            val githubUrl = utils.GitHubUrlHelper.generatePermalink(
+              owner = owner,
+              repo = repo,
+              filePath = filePath,
+              lineStart = lineStart,
+              lineEnd = lineEnd
+            )
+
+            models.Evidence(githubUrl)
+          }
+
+          AssessmentResult(
+            checkId = checkItem.id,
+            checkDescription = checkItem.description,
+            status = status,
+            confidence = confidence,
+            requiresReview = requiresReview,
+            reason = reason,
+            evidence = evidence
+          )
+        }
+      } catch {
+        case e: Exception =>
+          checks.map { check =>
+            AssessmentResult(
+              checkId = check.id,
+              checkDescription = check.description,
+              status = models.AssessmentStatus.Warning,
+              confidence = 0.0,
+              requiresReview = true,
+              reason = s"Failed to parse LLM response: ${e.getMessage}. Raw: $content",
+              evidence = Seq.empty
+            )
+          }
+      }
+    }
+  }
+
   private def callGemini(
       prompt: String,
       systemInstruction: String,
