@@ -12,7 +12,7 @@ import models.{AssessmentResult, Evidence}
 class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec: ExecutionContext) {
 
   private val apiKey  = config.getOptional[String]("pra.assessment.gemini.apiKey").getOrElse("MISSING_KEY")
-  private val model   = "gemini-2.0-flash"
+  private val model   = "gemini-2.0-flash-thinking-exp"
   private val baseUrl = "https://generativelanguage.googleapis.com/v1beta/models"
 
   // Note on Caching:
@@ -199,6 +199,40 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
       """.stripMargin
 
     callGemini(prompt, "You are a code analyzer. Return only JSON.", model, jsonMode = true).map { response =>
+      val content = extractText(response)
+      try {
+        Json.parse(content).as[Seq[String]]
+      } catch {
+        case _: Exception => Seq.empty
+      }
+    }
+  }
+
+  def generateSearchTerms(
+      sharedContext: String,
+      categoryDescription: String,
+      checks: Seq[models.CheckItem],
+      model: String
+  ): Future[Seq[String]] = {
+    val checksJson = checks.map(c => s"${c.id}: ${c.description}").mkString("\n")
+
+    val prompt = s"""
+      |Given this project context:
+      |$sharedContext
+      |
+      |And these checks to assess:
+      |$checksJson
+      |
+      |What search terms would help find relevant files in the codebase?
+      |Consider:
+      |- Technology names (e.g., "Upscan", "Mongo", "Auth")
+      |- Class/interface names (e.g., "AuthConnector", "Repository")
+      |- Configuration keys (e.g., "TTL", "timeout")
+      |
+      |Return ONLY a JSON array of 3-5 search terms. Example: ["Upscan", "AuthConnector", "Mongo"]
+      """.stripMargin
+
+    callGemini(prompt, "You are a code search expert. Return only JSON.", model, jsonMode = true).map { response =>
       val content = extractText(response)
       try {
         Json.parse(content).as[Seq[String]]

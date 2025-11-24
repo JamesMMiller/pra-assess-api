@@ -46,43 +46,23 @@ object TemplateRegistry {
     checks = Seq(
       // 1. Build & Resilience
       CheckItem("1.A", "Does the service implement any non-standard patterns, or contradict MDTP Opinions?"),
-      CheckItem(
-        "1.B",
-        "Are there any Bobby Rule violations? (Check build.sbt for deprecated dependencies)",
-        Some(Seq("deprecated", "bobby"))
-      ),
-      CheckItem("1.C", "Is the service using any deprecated HMRC Libraries?", Some(Seq("deprecated"))),
-      CheckItem(
-        "1.D",
-        "Are HTTP Verbs used for outbound calls instead of raw WSClient?",
-        Some(Seq("HttpClient", "WSClient", "GET", "POST"))
-      ),
-      CheckItem("1.E", "Is the README.md up to date and fit for purpose?", Some(Seq("README.md"))),
-      CheckItem("1.F", "Are appropriate timeouts set on I/O operations?", Some(Seq("timeout", "duration"))),
+      CheckItem("1.B", "Are there any Bobby Rule violations? (Check build.sbt for deprecated dependencies)"),
+      CheckItem("1.C", "Is the service using any deprecated HMRC Libraries?"),
+      CheckItem("1.D", "Are HTTP Verbs used for outbound calls instead of raw WSClient?"),
+      CheckItem("1.E", "Is the README.md up to date and fit for purpose?"),
+      CheckItem("1.F", "Are appropriate timeouts set on I/O operations?"),
 
       // 2. Data Persistence
-      CheckItem("2.A", "If using Mongo, is it used for JSON data persistence?", Some(Seq("Mongo", "Repository"))),
-      CheckItem("2.C", "Does public Mongo have a TTL <= 7 days?", Some(Seq("TTL", "expireAfterSeconds"))),
-      CheckItem("2.D", "Is Field Level Encryption used where necessary?", Some(Seq("Encryption", "Encrypted"))),
-      CheckItem("2.E", "Does protected Mongo have a TTL <= 30 days?", Some(Seq("TTL", "expireAfterSeconds"))),
-      CheckItem("2.G", "Is Object Store used for Binary data persistence?", Some(Seq("ObjectStore", "Binary"))),
+      CheckItem("2.A", "If using Mongo, is it used for JSON data persistence?"),
+      CheckItem("2.C", "Does public Mongo have a TTL <= 7 days?"),
+      CheckItem("2.D", "Is Field Level Encryption used where necessary?"),
+      CheckItem("2.E", "Does protected Mongo have a TTL <= 30 days?"),
+      CheckItem("2.G", "Is Object Store used for Binary data persistence?"),
 
       // 4. Security
-      CheckItem(
-        "4.A",
-        "Is Frontend Authentication implemented via Stride/Auth services?",
-        Some(Seq("AuthConnector", "Authorized", "Stride"))
-      ),
-      CheckItem(
-        "4.B",
-        "Are Public Microservices authenticated and authorised by default?",
-        Some(Seq("AuthConnector", "Authorized"))
-      ),
-      CheckItem(
-        "4.C",
-        "Are Protected Microservices authenticated and authorised by default?",
-        Some(Seq("AuthConnector", "Authorized"))
-      ),
+      CheckItem("4.A", "Is Frontend Authentication implemented via Stride/Auth services?"),
+      CheckItem("4.B", "Are Public Microservices authenticated and authorised by default?"),
+      CheckItem("4.C", "Are Protected Microservices authenticated and authorised by default?"),
 
       // 5. Admin Services
       CheckItem("5.A", "Ensure there is no public route to the service in MDTP Frontend Routes."),
@@ -100,12 +80,8 @@ object TemplateRegistry {
       CheckItem("9.A", "Are HTTP Verbs returns handled correctly?"),
 
       // 11. Auditing
-      CheckItem(
-        "11.A",
-        "Are explicit events audited in accordance with requirements?",
-        Some(Seq("AuditConnector", "sendEvent"))
-      ),
-      CheckItem("11.B", "Is implicit auditing enabled in configuration?", Some(Seq("auditing", "enabled"))),
+      CheckItem("11.A", "Are explicit events audited in accordance with requirements?"),
+      CheckItem("11.B", "Is implicit auditing enabled in configuration?"),
 
       // 13. Testing
       CheckItem("13.A", "Does the service have Unit Tests?"),
@@ -115,18 +91,10 @@ object TemplateRegistry {
       CheckItem("13.F", "Does the service have Accessibility Tests?"),
 
       // 15. Virus Checking
-      CheckItem(
-        "15.A",
-        "If uploading files, is the Upscan service incorporated?",
-        Some(Seq("Upscan", "UpscanConnector"))
-      ),
+      CheckItem("15.A", "If uploading files, is the Upscan service incorporated?"),
 
       // 16. Tracking Consent
-      CheckItem(
-        "16.A",
-        "Does the frontend service include the tracking consent link?",
-        Some(Seq("tracking", "consent", "GTM"))
-      )
+      CheckItem("16.A", "Does the frontend service include the tracking consent link?")
     )
   )
 

@@ -25,7 +25,7 @@ class AssessmentController @Inject() (
           .flatMap(templates.TemplateRegistry.get)
           .getOrElse(templates.TemplateRegistry.default)
 
-        val selectedModel = model.getOrElse("gemini-2.0-flash")
+        val selectedModel = model.getOrElse("gemini-2.0-flash-thinking-exp")
 
         val resultSource = assessmentOrchestrator.runAssessment(owner, repo, template, selectedModel)
         val eventSource  = resultSource.map(result => Json.toJson(result))
@@ -47,7 +47,7 @@ class AssessmentController @Inject() (
           .flatMap(templates.TemplateRegistry.get)
           .getOrElse(templates.TemplateRegistry.default)
 
-        val selectedModel = model.getOrElse("gemini-2.0-flash")
+        val selectedModel = model.getOrElse("gemini-2.0-flash-thinking-exp")
 
         assessmentOrchestrator.runBatchAssessment(owner, repo, template, selectedModel).map { results =>
           Ok(Json.toJson(results))

@@ -64,8 +64,13 @@ class AssessmentOrchestrator @Inject() (
         Future
           .sequence(categories.map { case (categoryId, checks) =>
             for {
-              // a. Collect Search Terms & Perform Search
-              searchTerms <- Future.successful(checks.flatMap(_.searchTerms.getOrElse(Seq.empty)).distinct)
+              // a. Generate Search Terms Dynamically & Perform Search
+              searchTerms <- geminiService.generateSearchTerms(
+                sharedContext,
+                s"Checks for category $categoryId",
+                checks,
+                model
+              )
               searchResults <-
                 if (searchTerms.nonEmpty) {
                   Future
