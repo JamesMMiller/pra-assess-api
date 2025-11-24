@@ -22,7 +22,7 @@ class AssessmentIntegrationSpec extends PlaySpec with GuiceOneAppPerSuite with S
       }
 
       val repoUrl = "https://github.com/hmrc/pillar2-frontend"
-      val request = FakeRequest(GET, s"/assess/stream?repoUrl=$repoUrl")
+      val request = FakeRequest(GET, s"/assess/stream?repoUrl=$repoUrl&templateId=test")
 
       val result = route(app, request).get
 
@@ -46,7 +46,7 @@ class AssessmentIntegrationSpec extends PlaySpec with GuiceOneAppPerSuite with S
 
       // Check that we can parse at least one result with new structure
       val firstResult = play.api.libs.json.Json.parse(events.head)
-      (firstResult \ "checkId").asOpt[String] mustBe defined
+      (firstResult \ "checkId").asOpt[String] mustBe Some("TEST-1")
       (firstResult \ "checkDescription").asOpt[String] mustBe defined
       (firstResult \ "status").asOpt[String] mustBe defined
       (firstResult \ "confidence").asOpt[Double] mustBe defined
@@ -78,7 +78,7 @@ class AssessmentIntegrationSpec extends PlaySpec with GuiceOneAppPerSuite with S
 
       val repoUrl = "https://github.com/hmrc/pillar2-frontend"
       // Use a valid model name to ensure it doesn't error out on the API side
-      val request = FakeRequest(GET, s"/assess/stream?repoUrl=$repoUrl&model=gemini-2.0-flash")
+      val request = FakeRequest(GET, s"/assess/stream?repoUrl=$repoUrl&model=gemini-2.0-flash&templateId=test")
 
       val result = route(app, request).get
       status(result) mustBe OK

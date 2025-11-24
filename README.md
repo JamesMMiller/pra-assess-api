@@ -79,7 +79,14 @@ curl -N "http://localhost:9000/assess/stream?repoUrl=https://github.com/hmrc/pil
 ### Available Templates
 
 - **`mdtp-pra`** (default): MDTP Platform Readiness Assessment
-  - Includes MDTP Handbook as context resource
+    - Comprehensive check (~25 items) covering:
+        - Build & Resilience (Dependencies, HTTP Verbs, Timeouts)
+        - Data Persistence (Mongo, TTL, Encryption)
+        - Security (Auth usage)
+        - Admin Services
+        - Logging & Auditing
+        - Testing & Accessibility
+- **`test`**: Minimal template for testing purposes.ource
   - Assesses against HMRC architectural standards
 
 ### Response Format
