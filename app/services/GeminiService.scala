@@ -62,14 +62,24 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
       sharedContext: String,
       checkDescription: String,
       fileTree: Seq[String],
-      model: String
+      model: String,
+      searchFiles: Seq[String] = Seq.empty
   ): Future[Seq[String]] = {
+    val searchFilesContext = if (searchFiles.nonEmpty) {
+      s"""
+         |The following files were found via code search and might be relevant:
+         |${searchFiles.take(20).map(f => s"- $f").mkString("\n")}
+         |""".stripMargin
+    } else ""
+
     val prompt = s"""
       |Given this project context:
       |$sharedContext
       |
       |And this file tree:
       |${fileTree.take(500).mkString("\n")}
+      |
+      |$searchFilesContext
       |
       |Identify the top 3-5 files that are most relevant to checking: "$checkDescription"
       |Return ONLY a JSON array of file paths. Example: ["app/controllers/HomeController.scala", "conf/application.conf"]
@@ -165,14 +175,24 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
       sharedContext: String,
       categoryDescription: String,
       fileTree: Seq[String],
-      model: String
+      model: String,
+      searchFiles: Seq[String] = Seq.empty
   ): Future[Seq[String]] = {
+    val searchFilesContext = if (searchFiles.nonEmpty) {
+      s"""
+         |The following files were found via code search and might be relevant:
+         |${searchFiles.take(20).map(f => s"- $f").mkString("\n")}
+         |""".stripMargin
+    } else ""
+
     val prompt = s"""
       |Given this project context:
       |$sharedContext
       |
       |And this file tree:
       |${fileTree.take(500).mkString("\n")}
+      |
+      |$searchFilesContext
       |
       |Identify the top 5-10 files that are most relevant to checking the category: "$categoryDescription"
       |Return ONLY a JSON array of file paths. Example: ["app/controllers/HomeController.scala", "conf/application.conf"]

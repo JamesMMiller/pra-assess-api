@@ -4,7 +4,8 @@ import play.api.libs.json._
 
 case class CheckItem(
     id: String,
-    description: String
+    description: String,
+    searchTerms: Option[Seq[String]] = None
 )
 
 object CheckItem {

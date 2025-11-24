@@ -64,13 +64,25 @@ class AssessmentOrchestrator @Inject() (
         Future
           .sequence(categories.map { case (categoryId, checks) =>
             for {
-              // a. Select Files for Category
+              // a. Collect Search Terms & Perform Search
+              searchTerms <- Future.successful(checks.flatMap(_.searchTerms.getOrElse(Seq.empty)).distinct)
+              searchResults <-
+                if (searchTerms.nonEmpty) {
+                  Future
+                    .sequence(searchTerms.map(term => gitHubConnector.searchCode(owner, repo, term)))
+                    .map(_.flatten.distinct)
+                } else {
+                  Future.successful(Seq.empty[String])
+                }
+
+              // b. Select Files for Category
               // We use a generic description for the category based on the first check or just the ID
               relevantFiles <- geminiService.selectFilesForCategory(
                 sharedContext,
                 s"Checks for category $categoryId",
                 fileTree,
-                model
+                model,
+                searchResults
               )
               // b. Fetch Content
               fileContents <- Future

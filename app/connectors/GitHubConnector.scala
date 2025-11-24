@@ -35,4 +35,18 @@ class GitHubConnector @Inject() (wsClient: WSClient)(implicit ec: ExecutionConte
       }
     }
   }
+
+  def searchCode(owner: String, repo: String, query: String): Future[Seq[String]] = {
+    val url = s"$baseUrl/search/code?q=repo:$owner/$repo+$query"
+    wsClient.url(url).get().map { response =>
+      if (response.status == 200) {
+        (response.json \ "items").as[Seq[JsObject]].map { item =>
+          (item \ "path").as[String]
+        }
+      } else {
+        // Return empty on failure (e.g. rate limits) to avoid breaking the flow
+        Seq.empty
+      }
+    }
+  }
 }
