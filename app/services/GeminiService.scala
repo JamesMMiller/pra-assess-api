@@ -367,8 +367,12 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
           Json.obj()
         }
         // Enable dynamic thinking for Gemini 2.5+ models
-        // thinkingBudget: -1 = dynamic (model adjusts based on complexity)
-        baseConfig ++ Json.obj("thinkingBudget" -> -1)
+        // thinkingConfig.thinkingBudget: -1 = dynamic (model adjusts based on complexity)
+        baseConfig ++ Json.obj(
+          "thinkingConfig" -> Json.obj(
+            "thinkingBudget" -> -1
+          )
+        )
       }
     )
 
