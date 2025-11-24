@@ -113,9 +113,10 @@ class GeminiService @Inject() (config: Configuration, ws: WSClient)(implicit ec:
     callGemini(prompt, template.basePrompt, model, jsonMode = true).map { response =>
       val content = extractText(response)
       try {
-        val json           = Json.parse(content)
-        val status         = models.AssessmentStatus.fromString((json \ "status").as[String])
-        val confidence     = (json \ "confidence").as[Double]
+        val json       = Json.parse(content)
+        val statusStr  = (json \ "status").asOpt[String].orElse((json \ "result").asOpt[String]).getOrElse("WARNING")
+        val status     = models.AssessmentStatus.fromString(statusStr)
+        val confidence = (json \ "confidence").as[Double]
         val requiresReview = (json \ "requiresReview").as[Boolean]
         val reason         = (json \ "reason").as[String]
 

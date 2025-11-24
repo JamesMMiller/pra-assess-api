@@ -20,12 +20,12 @@ object TemplateRegistry {
       |- Look for configuration that matches the requirements.
       |- If you cannot determine the answer from the code provided, state "N/A" or "Requires Review" and explain why.
       |
-      |You must return your assessment in the following JSON format:
+      |You must return a valid JSON object with the following structure:
       |{
-      |  "status": "PASS" | "WARNING" | "FAIL",
-      |  "confidence": <float between 0.0 and 1.0>,
+      |  "status": "PASS" | "FAIL" | "WARNING" | "N/A",
+      |  "confidence": <number between 0.0 and 1.0>,
       |  "requiresReview": <boolean>,
-      |  "reason": "<concise explanation>",
+      |  "reason": "<explanation>",
       |  "evidence": [
       |    { "filePath": "<path>", "lineStart": <int>, "lineEnd": <int> }
       |  ]
