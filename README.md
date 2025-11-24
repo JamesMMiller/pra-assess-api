@@ -76,6 +76,14 @@ To use a specific Gemini model (default is `gemini-2.0-flash`):
 curl -N "http://localhost:9000/assess/stream?repoUrl=https://github.com/hmrc/pillar2-frontend&model=gemini-1.5-pro"
 ```
 
+### Batch Assessment
+
+To run a batch assessment (recommended for CI/CD to avoid rate limits):
+
+```bash
+curl "http://localhost:9000/assess/batch?repoUrl=https://github.com/hmrc/pillar2-frontend"
+```
+
 ### Available Templates
 
 - **`mdtp-pra`** (default): MDTP Platform Readiness Assessment
