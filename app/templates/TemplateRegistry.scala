@@ -19,6 +19,17 @@ object TemplateRegistry {
       |- Check for forbidden patterns or libraries.
       |- Look for configuration that matches the requirements.
       |- If you cannot determine the answer from the code provided, state "N/A" or "Requires Review" and explain why.
+      |
+      |You must return your assessment in the following JSON format:
+      |{
+      |  "status": "PASS" | "WARNING" | "FAIL",
+      |  "confidence": <float between 0.0 and 1.0>,
+      |  "requiresReview": <boolean>,
+      |  "reason": "<concise explanation>",
+      |  "evidence": [
+      |    { "filePath": "<path>", "lineStart": <int>, "lineEnd": <int> }
+      |  ]
+      |}
       """.stripMargin.trim,
     contextResources = Seq(
       ContextResource(
@@ -91,7 +102,10 @@ object TemplateRegistry {
     id = "test",
     name = "Test Template",
     description = "Minimal template for integration testing.",
-    basePrompt = "You are a test assessor.",
+    basePrompt = """
+      |You are a test assessor.
+      |Return JSON: {"status": "PASS", "confidence": 1.0, "requiresReview": false, "reason": "Test passed", "evidence": []}
+      """.stripMargin.trim,
     contextResources = Seq.empty,
     checks = Seq(
       CheckItem("TEST-1", "Is this a valid project?")
